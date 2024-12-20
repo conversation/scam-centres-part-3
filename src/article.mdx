@@ -1,0 +1,379 @@
+import { ARTICLEWIDTH } from './util/constants'
+import Image from './components/Image'
+import BackgroundImage from './components/BackgroundImage'
+import { ScrollSection, ScrollForeground, ScrollTextChapter, ScrollBackground } from './components/ScrollSection'
+import TitleSection from './components/TitleSection'
+import Picture from './components/Picture'
+import Infographic from './components/Infographic'
+import Pullquote from './components/Pullquote'
+import HeirarchyGraphic from './components/HeirarchyGraphic'
+import ArticleSetup from './context/ArticleSetup'
+import AuthorSection, { Editorial, Author, Editors, Authors, Disclosures, Acknowledgements } from './components/Authors'
+
+<ArticleSetup
+  theme='dark'
+  title='Part 2'
+  dropCap={true}
+  author='Ivan Franceschini & Ling Li'
+  image='https://images.theconversation.com/files/629474/original/file-20241101-17-hvuwhr.png?auto=format&fit=crop&q=30&ixlib=react-9.10.0&w=1946'
+  keywords={['Southeast Asia', 'Myanmar', 'scam', 'scam centre', 'scammers', 'Chinese scams']}
+  standfirst="Inside Southeast Asia's slavery scam centres"
+/>
+
+<ScrollSection pinType="pin_clipped" className="intro_section mb-12 bg-black">
+  <ScrollBackground>
+    <Picture
+      src='https://images.theconversation.com/files/616688/original/file-20240902-16-ab0sos.jpg'
+      loading='eager'
+      className='full_screen_media make_visible'
+      imgClassName='object-bottom-center frank_img'
+      caption=''
+      source=''
+      sourceLink=''
+      alt=''
+      focalPoint={{
+        mobile: { x: 0.5, y: 0 },
+        tablet: { x: 0.5, y: 0 },
+        tabletLandscape: { x: 0.5, y: 0 },
+        laptop: { x: 0.5, y: 0 },
+        desktop: { x: 0.5, y: 0 }
+      }}
+    />
+    <Picture
+      src='https://images.theconversation.com/files/616687/original/file-20240902-20-fpm408.jpg'
+      loading='lazy'
+      className='full_screen_media'
+      imgClassName='object-bottom-center'
+      caption=''
+      source=''
+      sourceLink=''
+      alt=''
+      focalPoint={{
+        mobile: { x: 0.5, y: 0 },
+        tablet: { x: 0.5, y: 0 },
+        tabletLandscape: { x: 0.5, y: 0 },
+        laptop: { x: 0.5, y: 0 },
+        desktop: { x: 0.5, y: 0 }
+      }}
+    />
+  </ScrollBackground>
+  <ScrollForeground>
+    <ScrollTextChapter className="chapter_dark_background" position="right">
+      George, a young Ugandan man, led a relatively normal life in Kampala. An IT specialist, he fixed computers, configured routers and the like.
+    </ScrollTextChapter>
+    <ScrollTextChapter className="chapter_dark_background" step={true} position="left" >
+      Then COVID hit and that normality, along with his work, disappeared.
+    </ScrollTextChapter>
+    <ScrollTextChapter className="" position="center" step={true}>
+    <div>
+      <h1 className='text-5xl font-bold font-base'>Growth of an industry</h1>
+      <h3 className='text-2xl font-base'>Scam centres of South-East Asia Part 2</h3>
+      <div>
+        <span className='text-sm font-base inline-block'>By [Ivan Franceschini](https://theconversation.com/profiles/ivan-franceschini-1529038), [Ling Li](https://theconversation.com/profiles/ling-li-1529042) and The Conversation [Digital Storytelling Team]()</span>{' '}<span className='text-xs font-base opacity-50'>Published: <time >{new Date().toDateString()}</time></span>
+      </div>
+    </div>
+    </ScrollTextChapter>
+  </ScrollForeground>
+</ScrollSection>
+
+<ScrollSection pinType="pin_block" className="my-12" id="georgeMap">
+  <ScrollBackground>
+    <div id="map1"></div>
+  </ScrollBackground>
+  <ScrollForeground>
+    <ScrollTextChapter className="mt-[20vh] chapter_dark_background" position="center">
+        Like many Africans, George hoped to change his fortunes in Dubai.
+    </ScrollTextChapter>
+    <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
+        But life there was difficult and after two years, he was still struggling to make ends meet.
+    </ScrollTextChapter>
+    <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
+        Then in August 2022, a friend sent him a well-paid IT job opportunity in Laos and he jumped at it. The job was a six-month contract offering US$1,500 (A$2,400) per month, plus commissions and free accommodation. Everything seemed to check out.
+    </ScrollTextChapter>
+    <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
+        George was soon on his way to the Golden Triangle, a lawless area on Laos’ border with Myanmar and Thailand.
+    </ScrollTextChapter>
+    <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
+        Once there, he was asked to sign a contract completely different from what he had discussed in Dubai. He also had to pay a substantial amount of money, the equivalent of US$2,200 (A$3,500).
+    </ScrollTextChapter>
+    <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
+        His passport and phone were taken away and he was introduced to his new job: scamming people into putting money into fake investments.
+    </ScrollTextChapter>
+    <ScrollTextChapter step={true} position="center" className="">
+        <Pullquote className='py-6 text-red-50 text-xl sm:text-2xl text-balance text-center' quote="The moment they give you a script and tell you, you get to know immediately what you have to do." />
+    </ScrollTextChapter>
+    <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
+        For two months, George dragged his feet, insisting that he was just an IT guy. Then, one day he was sold to a second scam company in Myanmar, just across the Mekong River.
+    </ScrollTextChapter>
+    <ScrollTextChapter step={true} position="center" className="">
+    <Pullquote className='py-6 text-red-50 text-xl sm:text-2xl text-balance text-center' quote="They don't tell you [how much they sell you for]. They just tell you: ‘We own you. We bought you.’" />
+    <Pullquote className='py-6 text-red-50 text-xl sm:text-2xl text-balance text-center' quote="It’s weird. It takes you back to the, the ages of the slave trade in Africa. It was hard to believe when someone tells you: ‘I own you.’" startQuoteIcon={false}/>
+   
+    </ScrollTextChapter>
+    <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
+      He was supposed to be gone only for six months — it would take him an entire year to find his way back to Kampala.
+    </ScrollTextChapter>
+  </ScrollForeground>
+</ScrollSection>
+
+##  The rise of an industry
+
+George’s story is typical of the thousands of victims believed to be working in the scam industry today in South-East Asia. In the last 30 years, the industry has gone global, raking in billions of dollars every year. 
+
+In China, one of the main targets of scammers, authorities managed to [stop scams](https://m.yicai.com/news/101950838.html) valuing some 328.8 billion yuan in 2023, or roughly A$68 billion. 
+
+In the United States, the Federal Trade Commission [reported](https://www.ftc.gov/news-events/news/press-releases/2024/02/nationwide-fraud-losses-top-10-billion-2023-ftc-steps-efforts-protect-public) Americans lost more than US$10 billion (A$15.5 billion) to scams in 2023, with most money lost in investment scams.
+
+The online scam industry got its start in the 1990s in Taiwan, but soon shifted to mainland China, with many operations based in southern Fujian province. In recent years, it has truly gone global, with compounds now operating in South-East Asia, the Pacific, parts of Africa, Latin America and other regions.
+
+What attracted operators to countries like Cambodia, the Philippines, Myanmar and Laos, in particular, were the lack of regulations, lax law enforcement and protective umbrella of local elites willing to shield them from scrutiny. The close proximity to Taiwan and mainland China also ensured a steady supply of Chinese-speaking workers to target victims in China.
+
+<Image
+  src='https://images.theconversation.com/files/611308/original/file-20240805-19-pv3hzl.jpg'
+  align=''
+  className='aspect-[3/2]'
+  loading='lazy'
+  alt='Outside view of the Kaibo Hotel and Casino'
+  source='Photo by Roun Ry'
+  caption='Outside view of the Kaibo Hotel and Casino (now renamed as Kabin Hotel) with annexed compound in Otres Village, Sihanoukville, September 2022. Media reports have uncovered brutal treatment of people working in this compound and the broader area has become synonymous with violent crime.'
+/> 
+
+In addition, these scam operations require decent infrastructure, especially internet connectivity, telecommunications and office space. As a result, many emerged in connection with existing casinos or online gambling operations. 
+
+In Cambodia, for example, the coastal city of Sihanoukville had seen a [massive influx of Chinese investment](https://globalchinapulse.net/sihanoukville-rise-and-fall-of-a-frontier-city/) in the gambling and entertainment industry starting around 2017. Overnight, the once-sleepy city became awash with neon. Casinos, high-end hotels and condos went up everywhere. 
+
+<Image
+  src='https://images.theconversation.com/files/611303/original/file-20240805-17-dnyfy9.jpg'
+  align=''
+  className='aspect-[3/2]'
+  loading='lazy'
+  alt='Locals living in the front of the entrance of an abandoned casino'
+  source='Photo by Roun Ry'
+  caption='Local people living in the front of the entrance of an abandoned casino in Sihanoukville, September 2022. The city is a hub for mostly Chinese-run casinos, but the 2019 online gambling ban led to multiple closures.'
+/> 
+
+By 2019, the city was booming, bringing in an estimated US$3.5 billion to US$5 billion a year, about 90% of which came from online gambling.
+
+When the Cambodian government suddenly [cracked down](https://www.scmp.com/comment/opinion/article/3025687/how-cambodias-online-gambling-ban-sparked-great-chinese-exodus-2019) on online gambling in 2019, however, many of these operators abruptly shut down, leaving behind a massive infrastructure ready for scammers to use. 
+
+<Image
+  src='https://images.theconversation.com/files/611322/original/file-20240805-21-60yutc.jpg'
+  align=''
+  className='aspect-[3/2]'
+  loading='lazy'
+  alt='Local construction worker living in informal lodgings'
+  source='Photo by Roun Ry'
+  caption='Local construction worker living in informal lodgings on the ground floor of an abandoned building site in Sihanoukville, September 2022.'
+/> 
+
+In the Philippines, then-President Rodrigo Duterte [legalised](https://taiwaninsight.org/2021/02/04/going-to-paradise-the-online-gambling-industry-and-taiwanese-pogos-workers-in-the-philippines/) online gambling operations in major cities in 2016 in an effort to regulate the freewheeling industry and collect revenue for the state. 
+
+However, many of these operations soon became fronts for the lucrative scam industry, with [concerns over links to organised crime](https://edition.cnn.com/2024/07/23/asia/philippines-pogos-ban-illegal-gambling-intl-hnk/index.html). In response, the current president, Ferdinand Marcos Jr., decided to ban all online gaming operations last year. 
+
+It's a different story in Myanmar. Gambling was long outlawed here, but some casinos did develop in the areas on the Chinese and Thai borders controlled by ethnic armed groups. These areas became hubs for myriad criminal operations, including the online scamming industry.
+
+<ScrollSection pinType="pin_clipped" className="mb-12" id='kk_park'>
+  <ScrollBackground bgClassName='kk_park_sat_wrapper'>
+    <Picture
+      src='https://images.theconversation.com/files/620354/original/file-20240919-16-ldw6ce.jpg'
+      loading='eager'
+      className='full_screen_media make_visible '
+      imgClassName='object-bottom-center frank_img'
+      caption=''
+      source=''
+      sourceLink=''
+      alt=''
+      focalPoint={{
+        mobile: { x: 0.5, y: 0.5 },
+        tablet: { x: 0.5, y: 0.5 },
+        tabletLandscape: { x: 0.5, y: 0.5 },
+        laptop: { x: 0.5, y: 0.5 },
+        desktop: { x: 0.5, y: 0.5 }
+      }}
+    />
+    <Picture
+      src='https://images.theconversation.com/files/620352/original/file-20240919-18-fok5ns.jpg'
+      loading='lazy'
+      className='full_screen_media'
+      imgClassName='object-bottom-center'
+      caption=''
+      source=''
+      sourceLink=''
+      alt=''
+      focalPoint={{
+        mobile: { x: 0.5, y: 0.5 },
+        tablet: { x: 0.5, y: 0.5 },
+        tabletLandscape: { x: 0.5, y: 0.5 },
+        laptop: { x: 0.5, y: 0.5 },
+        desktop: { x: 0.5, y: 0.5 }
+      }}
+    />
+    <Picture
+      src='https://images.theconversation.com/files/620353/original/file-20240919-24-lnxbrf.jpg'
+      loading='lazy'
+      className='full_screen_media'
+      imgClassName='object-bottom-center'
+      caption=''
+      source=''
+      sourceLink=''
+      alt=''
+      focalPoint={{
+        mobile: { x: 0.5, y: 0.5 },
+        tablet: { x: 0.5, y: 0.5 },
+        tabletLandscape: { x: 0.5, y: 0.5 },
+        laptop: { x: 0.5, y: 0.5 },
+        desktop: { x: 0.5, y: 0.5 }
+      }}
+    />
+    <Picture
+      src='https://images.theconversation.com/files/620357/original/file-20240919-22-ia379a.jpg'
+      loading='lazy'
+      className='full_screen_media'
+      imgClassName='object-bottom-center'
+      caption=''
+      source=''
+      sourceLink=''
+      alt=''
+      focalPoint={{
+        mobile: { x: 0.5, y: 0.5 },
+        tablet: { x: 0.5, y: 0.5 },
+        tabletLandscape: { x: 0.5, y: 0.5 },
+        laptop: { x: 0.5, y: 0.5 },
+        desktop: { x: 0.5, y: 0.5 }
+      }}
+    />
+    <Picture
+      src='https://images.theconversation.com/files/620356/original/file-20240919-18-iur8r5.jpg'
+      loading='lazy'
+      className='full_screen_media'
+      imgClassName='object-bottom-center'
+      caption=''
+      source=''
+      sourceLink=''
+      alt=''
+      focalPoint={{
+        mobile: { x: 0.5, y: 0.5 },
+        tablet: { x: 0.5, y: 0.5 },
+        tabletLandscape: { x: 0.5, y: 0.5 },
+        laptop: { x: 0.5, y: 0.5 },
+        desktop: { x: 0.5, y: 0.5 }
+      }}
+    />
+  </ScrollBackground>
+  <ScrollForeground>
+    <ScrollTextChapter className="chapter_dark_background" position="center">
+      The growth of the KK Park scam compound on the Myanmar-Thailand border is illustrative of how quickly the industry has grown.
+    </ScrollTextChapter>
+    <ScrollTextChapter className="chapter_dark_background" step={true} position="left" >
+      As recently as October 2019, satellite images show the area to be agricultural land. 
+    </ScrollTextChapter>
+    <ScrollTextChapter className="chapter_dark_background" position="center" step={true}>
+      Construction began soon after. In just a few years, the area became one of Myanmar’s most notorious scam compounds. 
+    </ScrollTextChapter>
+    <ScrollTextChapter className="chapter_dark_background" position="right" step={true}>
+      As of early 2024, KK Park and other adjacent compounds covered some 7.5 square kilometres of land. 
+    </ScrollTextChapter>
+  </ScrollForeground>
+</ScrollSection>
+
+The industry boomed in the border areas when civil war broke out following the 2021 military coup. The Chinese government has grown increasingly frustrated as the scam centres have flourished, entrapping tens of thousands of Chinese workers and shielding wanted fugitives. 
+
+The sheer size of the industry makes it difficult to assess exactly how many compounds exist in the region in total. Through our monitoring of media reports, court and police reports, and Telegram channels, in addition to our victim testimonies, we have identified more than 300 sites in Cambodia, Myanmar, the Philippines and Laos. There will no doubt be many more that have not crossed our radar. 
+
+{/* <Infographic src='https://datawrapper.dwcdn.net/Nk6G7/' useDarkMade={false}/> */}
+
+## Shadowy figures pulling the strings 
+
+As the scam industry took root in South-East Asia, criminal syndicates realised they could scale up their activities quickly. 
+
+Scam operations were initially small-scale in nature, mostly located in apartments, villas and hotel rooms. By the mid-2010s, however, they began to coalesce in bigger, purpose-built compounds, with offices, dormitories, shops, entertainment venues and other amenities for workers. Many haveThe clubs that are similar to brothels, where young women provide sexual services to managers and scammers as a reward for good performances.
+
+They have also become more professional and are now run like "proper" companies. They have departments in charge of different sides of the business, such as operations, human resources, and the design, maintenance and troubleshooting of the software they use. External platforms [facilitate money laundering](https://globalchinapulse.net/moving-bricks-money-laundering-practices-in-the-online-scam-industry/). 
+
+Most compounds are heavily securitised, with barred windows, barbed-wire-topped fences and surveillance cameras. George describes the compound he was sold to in Myanmar as a “prison”.
+
+<Pullquote className='py-6 text-red-50 text-xl sm:text-2xl text-balance text-center' quote="At the gate you find 15 people manning the gate, then each office would have a security guard outside. … And during work, eight guards just sit there waiting for you. There’s no escaping." />
+
+<Pullquote className='py-6 text-red-50 text-xl sm:text-2xl text-balance text-center' quote="In many cases, it is extremely challenging to identify who is at the top of the hierarchy. While it is clear that well-established criminal figures and triad groups are involved, the industry appears to be dominated by a broad arraycohort of business-oriented groups that enter into partnerships with one another and the local elites where they operate." startQuoteIcon={false}/>
+
+Many of these groups are led by ethnic Chinese individuals, in some cases fugitives wanted by the Chinese government who have acquired multiple citizenships. But they are flanked by a very diverse cohort of people. 
+
+<HeirarchyGraphic />
+
+For instance, in Cambodia, researchers and journalists have compiled substantial evidence tying scam compounds to local politicians and businesspeople, which allows them to operate without running afoul of local law enforcement. In addition, these powerful elites are increasingly becoming financiers and owners of scam compounds themselves, rather than just partners for Chinese groups.
+
+Far from shying away from the spotlight, some of these actors lead very public lives. They extensively document their flamboyant lifestyles on social media and openly brag about making donations to charitiescharity initiatives run by entities linked to local authorities, if not to local law enforcement itself.
+
+In Cambodia, the police largely turn a blind eye to the industry. In some cases, police officials have suggested the compounds simply cannot be policed. One officer [told](https://globalchinapulse.net/sihanoukville-rise-and-fall-of-a-frontier-city/) a Cambodian news outlet in 2022: "These places don’t allow us to go in". While crackdowns occur periodically, well-connected operators remain largely unscathed, and the industry continues to thrive.
+
+There is also ample evidence from our victim testimonies that compound managers have a direct line of communication with the police. When we were in Sihanoukville in 2022, the government launched a crackdown on the industry. We saw firsthand how quickly the compounds were able to shut down and transfer their staff before any raids occurred. They clearly had been given advance notice. 
+
+Crackdowns are also temporary. By 2023, many scam centres in Cambodia were back in business. Some had merely cleaned up their facades a bit and erected signs to look more like legitimate businesses. And some well-known operations were making very public – and reputable-looking – donations to the Cambodian Red Cross, which is headed by Bun Rany, the wife of former Prime Minister Hun Sen and mother of the current prime minister. 
+
+## No chance they’ll be shut down.
+
+If our research over the past few years has taught us anything, it's that the capital behind these operations is very mobile. Scam operations frequently move within the region, but have also expanded to Serbia, Turkey, Georgia, Mexico, Peru, and some parts of Africa in recent years. 
+ 
+These scam compounds will continue to evolve, but the industry on the whole is no doubt here to stay.
+
+In the final part of this series, we’ll take you through a dramatic escape from one of the scam centres and explore the challenges of readjusting to life on the outside.
+
+<AuthorSection>
+ <Acknowledgements>
+  A special thank you to Mark Bo who contributed much of the data, as well as monitoring the digital footprint of these scam centres.
+  </Acknowledgements>
+
+ <Editorial>
+    <Authors>
+      <Author
+      name='Ivan Franceschini'
+      affiliation='The University of Melbourne'
+      affiliationLink='https://theconversation.com/institutions/the-university-of-melbourne-722'
+      imgSrc='https://cdn.theconversation.com/avatars/1529038/width238/getimage_345eee4d-e639-4cfa-8991-492b0459f47a.jpg'
+      profileLink='https://theconversation.com/profiles/ivan-franceschini-1529038'
+      title='Lecturer, Chinese Studies'
+      />
+      <Author
+      name='Ling Li'
+      affiliation="Ca' Foscari University of Venice"
+      affiliationLink='https://theconversation.com/institutions/ca-foscari-university-of-venice-4378'
+      imgSrc='https://cdn.theconversation.com/avatars/1529042/width238/file-20240726-17-rt9b0t.jpg'
+      profileLink='https://theconversation.com/profiles/ling-li-1529042'
+      title='PhD candidate'
+      />
+    </Authors>
+
+    <Editors>
+      <Author
+        name='Justin Bergman'
+        affiliation=''
+        affiliationLink=''
+        imgSrc='https://cdn.theconversation.com/avatars/470587/width238/image-20191027-113962-mmopio.jpg'
+        profileLink='https://theconversation.com/profiles/justin-bergman-470587'
+        title='Senior Editor'
+      />
+
+      <Author
+        name='Matt Garrow'
+        affiliation=''
+        affiliationLink=''
+        imgSrc='https://cdn.theconversation.com/avatars/1474685/width238/image-20241104-15-rjlv0v.jpg'
+        profileLink='https://theconversation.com/profiles/matt-garrow-1474685'
+        title='Editorial Web Developer'
+      />
+
+      <Author
+        name='Ashlynne McGhee'
+        affiliation=''
+        affiliationLink=''
+        imgSrc='https://cdn.theconversation.com/avatars/1544096/width238/image-20240715-17-v7r5ob.jpg'
+        profileLink='https://theconversation.com/profiles/ashlynne-mcghee-1544096'
+        title='Digital Storytelling Editor'
+      />
+    </Editors>
+  </Editorial>
+
+<Disclosures>
+  The authors do not work for, consult, own shares in or receive funding from any company or organisation that would benefit from this article, and have disclosed no relevant affiliations beyond their academic appointment.
+</Disclosures>
+</AuthorSection>
