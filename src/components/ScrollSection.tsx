@@ -3,9 +3,16 @@ import { addClassToChildren, cn } from "../util/helpers";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { ARTICLEWIDTH } from "../util/constants";
-import { useSetAtom } from "jotai";
-import { headerHeight } from "../context/atom";
+import {
+  ARTICLEWIDTH,
+  mapLocations,
+  LayerType,
+  Layer,
+  LayerTypes,
+} from "../util/constants";
+import { useAtomValue, useSetAtom } from "jotai";
+import { headerHeight, mapInstance } from "../context/atom";
+import { PaintSpecification } from "mapbox-gl";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,6 +29,7 @@ export function ScrollSection({
 }) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const setHeaderHeight = useSetAtom(headerHeight);
+  const georgeMap = useAtomValue(mapInstance);
 
   useGSAP(
     () => {
@@ -64,7 +72,7 @@ export function ScrollSection({
         ".pinned_background_wrapper > *"
       );
 
-      setHeaderHeight(section.clientHeight);
+      setHeaderHeight(section.clientHeight - window.innerHeight);
 
       gsap
         .timeline({
@@ -85,6 +93,17 @@ export function ScrollSection({
           }
         );
 
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: steps[1].parentElement,
+            start: "top top",
+            end: "top top-=100%",
+            scrub: true,
+          },
+        })
+        .fromTo(section, { alpha: 1 }, { alpha: 0 });
+
       gsap.timeline().fromTo(
         ".frank_img",
         { xPercent: -5 },
@@ -98,6 +117,7 @@ export function ScrollSection({
     { scope: sectionRef }
   );
 
+  // KK Park
   useGSAP(
     () => {
       const section = sectionRef.current;
@@ -125,13 +145,101 @@ export function ScrollSection({
     { scope: sectionRef }
   );
 
+  // George map
   useGSAP(
     () => {
       const section = sectionRef.current;
 
       if (!section || section.id !== "georgeMap") return;
+
+      const steps = section.querySelectorAll(".pinned_foreground .step");
+
+      function setLayerOpacity(layer: Layer): void {
+        const layerTypes: LayerTypes = {
+          fill: ["fill-opacity"],
+          line: ["line-opacity"],
+          circle: ["circle-opacity", "circle-stroke-opacity"],
+          symbol: ["icon-opacity", "text-opacity"],
+          raster: ["raster-opacity"],
+          "fill-extrusion": ["fill-extrusion-opacity"],
+          heatmap: ["heatmap-opacity"],
+        };
+
+        const mapLayer = georgeMap!.getLayer(layer.layer);
+
+        if (!mapLayer) return;
+
+        const layerType = mapLayer.type as LayerType;
+
+        if (!layerTypes[layerType]) {
+          console.error(`Unsupported layer type: "${layerType}"`);
+          return;
+        }
+
+        const paintProps = layerTypes[layerType];
+
+        paintProps.forEach((prop) => {
+          if (layer.duration) {
+            const transitionProp =
+              `${prop}-transition` as keyof PaintSpecification;
+            const options = { duration: layer.duration };
+            georgeMap!.setPaintProperty(layer.layer, transitionProp, options);
+          }
+
+          const validProp = prop as keyof PaintSpecification;
+
+          georgeMap!.setPaintProperty(layer.layer, validProp, layer.opacity);
+        });
+      }
+
+      steps.forEach((step, index, steps) => {
+        const nextStep = steps[index + 1]; // Get the next step
+
+        ScrollTrigger.create({
+          trigger: step,
+          start: "top 90%",
+          endTrigger: nextStep ? nextStep : step,
+          end: nextStep ? "top 90%" : "bottom 90%",
+          onToggle: (element) => {
+            const mapLocation = mapLocations[index];
+
+            if (!mapLocation) return;
+
+            if (element.isActive) {
+              georgeMap!.flyTo({
+                ...mapLocation.centerLocation,
+                zoom: mapLocation.centerLocation.zoom,
+              });
+
+              if (mapLocation.onChapterEnter) {
+                mapLocation.onChapterEnter.forEach(setLayerOpacity);
+              }
+
+              if (mapLocation.rotateAnimation) {
+                georgeMap!.once("moveend", () => {
+                  const rotateNumber = georgeMap!.getBearing();
+                  const rotationBearing =
+                    mapLocation.rotationDirection === "CCW"
+                      ? ((rotateNumber + 180) % 360) + 1
+                      : ((rotateNumber + 180) % 360) - 1;
+                  georgeMap!.rotateTo(rotationBearing, {
+                    duration: 200000,
+                    easing: function (t) {
+                      return Math.sin((t * Math.PI) / 2);
+                    },
+                  });
+                });
+              }
+            } else {
+              // if (mapLocation.onChapterExit) {
+              //   mapLocation.onChapterExit.forEach(setLayerOpacity);
+              // }
+            }
+          },
+        });
+      });
     },
-    { scope: sectionRef }
+    { scope: sectionRef, dependencies: [georgeMap] }
   );
 
   return (
