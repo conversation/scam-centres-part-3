@@ -27,11 +27,11 @@
   }
 
   .imgfloat-right {
-    @apply float-right !mb-8 !mt-0 md:ml-4 md:mr-article-float-margin md:w-article-width-half;
+    @apply float-right !mb-8 !mt-0 sm:ml-4 sm:mr-article-float-margin sm:w-article-width-half;
   }
 
   .imgfloat-left {
-    @apply float-left !mb-8 !mt-0 md:ml-article-float-margin md:mr-4 md:w-article-width-half;
+    @apply float-left !mb-8 !mt-0 sm:ml-article-float-margin sm:mr-4 sm:w-article-width-half;
   }
 
   .imgfloat-right figcaption,
@@ -48,7 +48,7 @@
   /* --------- Pinned section --------- */
 
   .pinned_section {
-    @apply relative grid min-h-screen w-full text-lg md:text-xl;
+    @apply relative grid min-h-screen w-full text-lg sm:text-xl;
   }
 
   .pin_block .pinned_background {
@@ -90,24 +90,24 @@
   }
 
   .chapter_wrapper.right {
-    @apply items-center md:items-end;
+    @apply items-center sm:items-end;
   }
   .chapter_wrapper.right p {
-    @apply text-center md:max-w-[50%];
+    @apply text-center sm:max-w-[50%];
   }
 
   .chapter_wrapper.left {
-    @apply items-center md:items-start;
+    @apply items-center sm:items-start;
   }
   .chapter_wrapper.left > * {
-    @apply text-center md:max-w-[50%];
+    @apply text-center sm:max-w-[50%];
   }
 
   .chapter_wrapper.center {
     @apply items-center;
   }
   .chapter_wrapper.center > * {
-    @apply text-center md:max-w-[80%];
+    @apply text-center sm:max-w-[80%];
   }
 
   /* ----- FOR THE PINNED BACKGROUND  ----- */
