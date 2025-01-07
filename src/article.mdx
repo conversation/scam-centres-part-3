@@ -9,6 +9,8 @@ import Pullquote from './components/Pullquote'
 import HeirarchyGraphic from './components/HeirarchyGraphic'
 import ArticleSetup from './context/ArticleSetup'
 import AuthorSection, { Editorial, Author, Editors, Authors, Disclosures, Acknowledgements } from './components/Authors'
+import GeorgeMap from './components/GeorgeMap'
+import TitleTextBorder from './components/TitleTextBorder'
 
 <ArticleSetup
   theme='dark'
@@ -49,11 +51,11 @@ import AuthorSection, { Editorial, Author, Editors, Authors, Disclosures, Acknow
       sourceLink=''
       alt=''
       focalPoint={{
-        mobile: { x: 0.5, y: 0 },
-        tablet: { x: 0.5, y: 0 },
-        tabletLandscape: { x: 0.5, y: 0 },
-        laptop: { x: 0.5, y: 0 },
-        desktop: { x: 0.5, y: 0 }
+        mobile: { x: 0.6, y: 0 },
+        tablet: { x: 0.6, y: 0 },
+        tabletLandscape: { x: 0.55, y: 0 },
+        laptop: { x: 0.55, y: 0 },
+        desktop: { x: 0.55, y: 0 }
       }}
     />
   </ScrollBackground>
@@ -64,51 +66,58 @@ import AuthorSection, { Editorial, Author, Editors, Authors, Disclosures, Acknow
     <ScrollTextChapter className="chapter_dark_background" step={true} position="left" >
       Then COVID hit and that normality, along with his work, disappeared.
     </ScrollTextChapter>
-    <ScrollTextChapter className="" position="center" step={true}>
-    <div>
-      <h1 className='text-5xl font-bold font-base'>Growth of an industry</h1>
-      <h3 className='text-2xl font-base'>Scam centres of South-East Asia Part 2</h3>
+    <ScrollTextChapter className="mb-[80vh]" position="center" step={true}>
       <div>
-        <span className='text-sm font-base inline-block'>By [Ivan Franceschini](https://theconversation.com/profiles/ivan-franceschini-1529038), [Ling Li](https://theconversation.com/profiles/ling-li-1529042) and The Conversation [Digital Storytelling Team]()</span>{' '}<span className='text-xs font-base opacity-50'>Published: <time >{new Date().toDateString()}</time></span>
+        <div className='mx-auto max-w-[45ch] text-center'>
+          <TitleTextBorder as={'h1'} className='text-balance text-center font-base text-4xl font-bold md:text-5xl lg:text-6xl'>Growth of an industry</TitleTextBorder>
+          <br />
+        </div>
+       
+        <h3 className='text-center text-2xl font-bold mt-5 font-base'>Scam centres of South-East Asia Part 2</h3>
+        <div className='mt-6'>
+          <span className='text-sm font-base inline-block'>By [Ivan Franceschini](https://theconversation.com/profiles/ivan-franceschini-1529038), [Ling Li](https://theconversation.com/profiles/ling-li-1529042) and The Conversation [Digital Storytelling Team]()</span>{' '}<span className='text-xs font-base opacity-50'>Published: <time >{new Date().toDateString()}</time></span>
+        </div>
       </div>
-    </div>
     </ScrollTextChapter>
   </ScrollForeground>
 </ScrollSection>
 
-<ScrollSection pinType="pin_block" className="my-12" id="georgeMap">
+<ScrollSection pinType="pin_block" className="mt-[-100vh]" id="georgeMap">
   <ScrollBackground>
-    <div id="map1"></div>
+    <GeorgeMap />
   </ScrollBackground>
   <ScrollForeground>
-    <ScrollTextChapter className="mt-[20vh] chapter_dark_background" position="center">
-        Like many Africans, George hoped to change his fortunes in Dubai.
+    <ScrollTextChapter step={true} className="mt-[20vh] chapter_dark_background" position="center">
+      Like many Africans, George hoped to change his fortunes in Dubai.
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
-        But life there was difficult and after two years, he was still struggling to make ends meet.
+      But life there was difficult and after two years, he was still struggling to make ends meet.
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
-        Then in August 2022, a friend sent him a well-paid IT job opportunity in Laos and he jumped at it. The job was a six-month contract offering US$1,500 (A$2,400) per month, plus commissions and free accommodation. Everything seemed to check out.
+      Then in August 2022, a friend sent him a well-paid IT job opportunity in Laos and he jumped at it. The job was a six-month contract offering US$1,500 (A$2,400) per month, plus commissions and free accommodation. Everything seemed to check out.
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
-        George was soon on his way to the Golden Triangle, a lawless area on Laos’ border with Myanmar and Thailand.
+      George was soon on his way to the Golden Triangle, a lawless area on Laos’ border with Myanmar and Thailand.
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
-        Once there, he was asked to sign a contract completely different from what he had discussed in Dubai. He also had to pay a substantial amount of money, the equivalent of US$2,200 (A$3,500).
+      Once there, he was asked to sign a contract completely different from what he had discussed in Dubai. He also had to pay a substantial amount of money, the equivalent of US$2,200 (A$3,500).
+    </ScrollTextChapter>
+    <ScrollTextChapter position="center" className="chapter_dark_background">
+      His passport and phone were taken away and he was introduced to his new job: scamming people into putting money into fake investments.
+    </ScrollTextChapter>
+    <ScrollTextChapter position="center" className="chapter_dark_background">
+      <div>
+        <Pullquote className='' quote="The moment they give you a script and tell you, you get to know immediately what you have to do." />
+      </div>
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
-        His passport and phone were taken away and he was introduced to his new job: scamming people into putting money into fake investments.
-    </ScrollTextChapter>
-    <ScrollTextChapter step={true} position="center" className="">
-        <Pullquote className='py-6 text-red-50 text-xl sm:text-2xl text-balance text-center' quote="The moment they give you a script and tell you, you get to know immediately what you have to do." />
+      For two months, George dragged his feet, insisting that he was just an IT guy. Then, one day he was sold to a second scam company in Myanmar, just across the Mekong River.
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
-        For two months, George dragged his feet, insisting that he was just an IT guy. Then, one day he was sold to a second scam company in Myanmar, just across the Mekong River.
-    </ScrollTextChapter>
-    <ScrollTextChapter step={true} position="center" className="">
-    <Pullquote className='py-6 text-red-50 text-xl sm:text-2xl text-balance text-center' quote="They don't tell you [how much they sell you for]. They just tell you: ‘We own you. We bought you.’" />
-    <Pullquote className='py-6 text-red-50 text-xl sm:text-2xl text-balance text-center' quote="It’s weird. It takes you back to the, the ages of the slave trade in Africa. It was hard to believe when someone tells you: ‘I own you.’" startQuoteIcon={false}/>
-   
+      <div>
+        <Pullquote className='' quote="They don't tell you [how much they sell you for]. They just tell you: ‘We own you. We bought you.’" />
+        <Pullquote className='' quote="It’s weird. It takes you back to the, the ages of the slave trade in Africa. It was hard to believe when someone tells you: ‘I own you.’" startQuoteIcon={false}/>
+      </div>
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
       He was supposed to be gone only for six months — it would take him an entire year to find his way back to Kampala.
@@ -292,9 +301,9 @@ They have also become more professional and are now run like "proper" companies.
 
 Most compounds are heavily securitised, with barred windows, barbed-wire-topped fences and surveillance cameras. George describes the compound he was sold to in Myanmar as a “prison”.
 
-<Pullquote className='py-6 text-red-50 text-xl sm:text-2xl text-balance text-center' quote="At the gate you find 15 people manning the gate, then each office would have a security guard outside. … And during work, eight guards just sit there waiting for you. There’s no escaping." />
+<Pullquote className='' quote="At the gate you find 15 people manning the gate, then each office would have a security guard outside. … And during work, eight guards just sit there waiting for you. There’s no escaping." />
 
-<Pullquote className='py-6 text-red-50 text-xl sm:text-2xl text-balance text-center' quote="In many cases, it is extremely challenging to identify who is at the top of the hierarchy. While it is clear that well-established criminal figures and triad groups are involved, the industry appears to be dominated by a broad arraycohort of business-oriented groups that enter into partnerships with one another and the local elites where they operate." startQuoteIcon={false}/>
+<Pullquote className='' quote="In many cases, it is extremely challenging to identify who is at the top of the hierarchy. While it is clear that well-established criminal figures and triad groups are involved, the industry appears to be dominated by a broad arraycohort of business-oriented groups that enter into partnerships with one another and the local elites where they operate." startQuoteIcon={false}/>
 
 Many of these groups are led by ethnic Chinese individuals, in some cases fugitives wanted by the Chinese government who have acquired multiple citizenships. But they are flanked by a very diverse cohort of people. 
 
