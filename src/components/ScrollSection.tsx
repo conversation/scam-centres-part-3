@@ -124,7 +124,9 @@ export function ScrollSection({
 
       if (!section || section.id !== "kk_park") return;
       const text = section.querySelector(".pinned_foreground");
-      const figureWrapper = section.querySelector(".kk_park_sat_wrapper");
+      const backgroundImages = section.querySelectorAll(
+        ".kk_park_sat_wrapper img"
+      );
 
       // Animate zoom
       gsap
@@ -137,7 +139,7 @@ export function ScrollSection({
           },
         })
         .fromTo(
-          figureWrapper,
+          backgroundImages,
           { scale: 1.5 },
           { scale: 1, ease: "power1.inOut" }
         );
