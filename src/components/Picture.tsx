@@ -5,8 +5,8 @@ interface PictureProps {
   src: string;
   loading: "lazy" | "eager";
   caption: string;
-  source?: string;
-  sourceLink?: string;
+  source: string;
+  sourceLink: string;
   className?: string;
   imgClassName?: string;
   alt: string;
@@ -73,17 +73,27 @@ export default function Picture({
 
   const srcSetParams = `fit=${imgixParams.fit}&auto=${imgixParams.auto}&crop=${imgixParams.crop}&usm=${imgixParams.usm}`;
 
-  const renderSource = () =>
-    source &&
-    (sourceLink ? (
-      <span>
-        <a href={sourceLink} target="_blank" rel="noopener noreferrer">
-          {source}
-        </a>
-      </span>
-    ) : (
-      <span>{source}</span>
-    ));
+  const renderSource = () => {
+    if (source && sourceLink && caption) {
+      return (
+        <figcaption>
+          {caption}{" "}
+          <span className="opacity-70">
+            <a href={sourceLink} target="_blank" rel="noopener noreferrer">
+              {source}
+            </a>
+          </span>
+        </figcaption>
+      );
+    } else if (source || caption) {
+      return (
+        <figcaption>
+          {caption} <span className="opacity-70">{source}</span>
+        </figcaption>
+      );
+    }
+    return <></>;
+  };
 
   return (
     <figure className={cn("", className)}>
@@ -108,12 +118,7 @@ export default function Picture({
           alt={alt}
         />
       </picture>
-      {caption && (
-        <figcaption>
-          {caption}
-          {renderSource()}
-        </figcaption>
-      )}
+      {renderSource()}
     </figure>
   );
 }
