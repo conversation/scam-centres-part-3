@@ -52,7 +52,7 @@ export default function HeirarchyGraphic() {
       </div>
       <figcaption>
         How one survivor of a scam compound in Myanmar described the structure
-        to us.
+        to us. <span className="opacity-70">Source: Author provided</span>
       </figcaption>
     </figure>
   );
