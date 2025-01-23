@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 import { useDarkMode } from "../context/useDarkMode";
+import { cn } from "../util/helpers";
 
 export default function Infographic({
+  className,
   src,
   useDarkMade = true,
 }: {
+  className?: string;
   src: string;
   useDarkMade: boolean;
 }) {
@@ -55,5 +58,5 @@ export default function Infographic({
     };
   }, [src, isDarkMode]);
 
-  return <div id="chart-container" className="relative"></div>;
+  return <div id="chart-container" className={cn("relative", className)}></div>;
 }
