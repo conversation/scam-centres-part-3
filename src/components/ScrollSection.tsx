@@ -40,6 +40,10 @@ export function ScrollSection({
       const backgroundElements = section.querySelectorAll(
         ".pinned_background_wrapper > *"
       );
+      const backgroundImageElements = section.querySelectorAll(
+        ".pinned_background_wrapper img"
+      );
+      const foregroundElement = section.querySelectorAll(".foregroundElement");
 
       steps.forEach((step, index) => {
         const element = backgroundElements[index + 1];
@@ -57,6 +61,19 @@ export function ScrollSection({
           });
         }
       });
+
+      if (backgroundImageElements.length) {
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: foregroundElement,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            },
+          })
+          .to(backgroundImageElements, { scale: 1.5, ease: "power1.inOut" });
+      }
     },
     { scope: sectionRef }
   );
