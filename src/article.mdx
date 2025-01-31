@@ -11,6 +11,7 @@ import ArticleSetup from './context/ArticleSetup'
 import AuthorSection, { Editorial, Author, Editors, Authors, Disclosures, Acknowledgements } from './components/Authors'
 import GeorgeMap from './components/GeorgeMap'
 import TitleTextBorder from './components/TitleTextBorder'
+import BeforeAfterSlider from './components/BeforeAfterSlider'
 
 <ArticleSetup
   theme='dark'
@@ -64,7 +65,7 @@ import TitleTextBorder from './components/TitleTextBorder'
       George, a young Ugandan man, led a relatively normal life in the country’s capital, Kampala. An IT specialist, he did tasks such as fixing computers and configuring routers.
     </ScrollTextChapter>
     <ScrollTextChapter className="" step={true} position="left" >
-      Then COVID hit and that normality, along with his work, disappeared.
+      Then COVID hit and that normality, along with his work, disappeared. George is a pseudonym, he's still worried about his safety.
     </ScrollTextChapter>
     <ScrollTextChapter className="mb-[80vh]" position="center" step={true}>
       <div className='place-content-center pt-40 mb-20'>
@@ -87,7 +88,7 @@ import TitleTextBorder from './components/TitleTextBorder'
 
         <div className='text-center'>
           <span className='inline-block font-base text-sm'>By [Ivan Franceschini](https://theconversation.com/profiles/ivan-franceschini-1529038), [Ling
-          Li](https://theconversation.com/profiles/ling-li-1529042) and The Conversation Digital Storytelling Team. Photos by Roun Ry and Ivan Franceschini</span><br/><span className='font-base text-xs opacity-50'>Published: <time className=''>{new Date().toDateString()}</time></span>
+          Li](https://theconversation.com/profiles/ling-li-1529042) and The Conversation Digital Storytelling Team. Photos by Roun Ry and Ivan Franceschini.</span><br/><span className='font-base text-xs opacity-50'>Published: <time className=''>{new Date().toDateString()}</time></span>
         </div>
       </div>
     </ScrollTextChapter>
@@ -128,7 +129,7 @@ import TitleTextBorder from './components/TitleTextBorder'
     <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
       <div>
         <Pullquote className='' quote="They don't tell you [how much they sell you for]. They just tell you: ‘We own you. We bought you.’" />
-        <Pullquote className='' quote="It’s weird. It takes you back to the, the ages of the slave trade in Africa. It was hard to believe when someone tells you: ‘I own you.’" startQuoteIcon={false}/>
+        <Pullquote className='' quote="It’s weird. It takes you back to the ages of the slave trade in Africa. It was hard to believe when someone tells you: ‘I own you.’" startQuoteIcon={false}/>
       </div>
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
@@ -210,7 +211,7 @@ When the Cambodian government suddenly [cracked down](https://www.scmp.com/comme
 Local people living in the front of the entrance of an abandoned casino in Sihanoukville (left) or in informal lodgings on the ground floors of an abandoned building sites.{" "}<span className='opacity-70'>Photo: Roun Ry</span>
 </figcaption> */}
 
-<Image
+{/* <Image
   src='https://images.theconversation.com/files/611303/original/file-20240805-17-dnyfy9.jpg'
   align=''
   imgClassName='aspect-[3/2]'
@@ -218,7 +219,19 @@ Local people living in the front of the entrance of an abandoned casino in Sihan
   alt='Locals living in the front of the entrance of an abandoned casino'
   source='Photo: Roun Ry'
   caption='Local people living in the front of the entrance of an abandoned casino in Sihanoukville, September 2022. The city is a hub for mostly Chinese-run casinos, but the 2019 online gambling ban led to multiple closures.'
-/> 
+/>  */}
+
+<BeforeAfterSlider
+  beforeSrc='https://images.theconversation.com/files/645686/original/file-20250130-15-dml083.jpg'
+  afterSrc='https://images.theconversation.com/files/645486/original/file-20250129-15-j565ud.jpg'
+  className=''
+  sliderClassName='aspect-[839/472]'
+  loading='lazy'
+  source='Satellite image: Google'
+  caption="Satellite images from 2016 (left) and 2021 (right) show the spread of a massive development zone, with known scam compounds, outside Sihanoukville."
+  alt='Satellite images from 2016 and 2021 of a massive development zone outside Sihanoukville.'
+  sliderPosition={30}
+/>
 
 {/* 
 
