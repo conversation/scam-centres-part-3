@@ -34,7 +34,7 @@ export function ScrollSection({
   useGSAP(
     () => {
       const section = sectionRef.current;
-      if (!section) return;
+      if (!section ) return;
 
       const steps = section.querySelectorAll(".pinned_foreground .step");
       const backgroundElements = section.querySelectorAll(
@@ -62,7 +62,7 @@ export function ScrollSection({
         }
       });
 
-      if (backgroundImageElements.length) {
+      if (backgroundImageElements.length && section.id !== "kk_park") {
         gsap
           .timeline({
             scrollTrigger: {
