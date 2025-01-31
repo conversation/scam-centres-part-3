@@ -96,7 +96,7 @@
   .chapter_wrapper.right {
     @apply items-center sm:items-end;
   }
-  .chapter_wrapper.right p {
+  .chapter_wrapper.right > * {
     @apply text-center sm:max-w-[50%];
   }
 
