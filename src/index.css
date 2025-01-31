@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-  img {
+  /* img {
     will-change: opacity;
     opacity: 0;
   }
@@ -11,7 +11,7 @@
   img[loaded] {
     opacity: 1;
     animation: fadeIn 0.5s ease-in-out;
-  }
+  } */
 
   @keyframes fadeIn {
     0% {
@@ -37,6 +37,10 @@
   .imgfloat-right figcaption,
   .imgfloat-left figcaption {
     @apply !max-w-none;
+  }
+
+  .no-transition {
+    transition: none !important;
   }
 }
 
