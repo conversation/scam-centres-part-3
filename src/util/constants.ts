@@ -345,7 +345,7 @@ export const mapLocations: MapLocationType[] = [
       },
     ],
     centerLocation: {
-      center: [99.89, 20.45],
+      center: [100.11, 20.42],
       zoom: 12,
       pitch: 0.0,
       bearing: 0.0,
@@ -405,7 +405,7 @@ export const mapLocations: MapLocationType[] = [
       },
     ],
     centerLocation: {
-      center: [99.89, 20.45],
+      center: [100.11, 20.42],
       zoom: 12,
       pitch: 0.0,
       bearing: 0.0,

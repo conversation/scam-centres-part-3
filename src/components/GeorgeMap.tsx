@@ -419,7 +419,7 @@ export default function GeorgeMap() {
                 geometry: {
                   coordinates: [
                     [100.105, 20.34],
-                    [99.89, 20.45],
+                    [100.11, 20.42],
                   ],
                   type: "LineString",
                 },
@@ -439,7 +439,7 @@ export default function GeorgeMap() {
                 type: "Feature",
                 geometry: {
                   type: "Point",
-                  coordinates: [99.89, 20.45],
+                  coordinates: [100.11, 20.42],
                 },
                 properties: {
                   title: "Laos",
@@ -459,7 +459,7 @@ export default function GeorgeMap() {
                 properties: {},
                 geometry: {
                   coordinates: [
-                    [99.89, 20.45],
+                    [100.11, 20.42],
                     [102.61, 17.96],
                     [32.57, 0.31],
                   ],
@@ -470,7 +470,7 @@ export default function GeorgeMap() {
                 type: "Feature",
                 geometry: {
                   type: "Point",
-                  coordinates: [99.89, 20.45],
+                  coordinates: [100.11, 20.42],
                 },
                 properties: {
                   title: "Myanmar",

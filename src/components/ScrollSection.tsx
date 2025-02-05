@@ -249,11 +249,7 @@ export function ScrollSection({
                   });
                 });
               }
-            } else {
-              // if (mapLocation.onChapterExit) {
-              //   mapLocation.onChapterExit.forEach(setLayerOpacity);
-              // }
-            }
+            } 
           },
         });
       });
