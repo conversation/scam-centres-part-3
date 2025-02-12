@@ -28,7 +28,7 @@ import BeforeAfterSlider from './components/BeforeAfterSlider'
     <Picture
       src='https://images.theconversation.com/files/616688/original/file-20240902-16-ab0sos.jpg'
       loading='eager'
-      className='full_screen_media make_visible'
+      className='full_screen_media make_visible md:-translate-x-32'
       imgClassName='object-bottom-center frank_img'
       caption=''
       source=''
@@ -61,34 +61,36 @@ import BeforeAfterSlider from './components/BeforeAfterSlider'
     />
   </ScrollBackground>
   <ScrollForeground>
-    <ScrollTextChapter className="max-sm:chapter_dark_background" position="right">
-      George, a young Ugandan man, led a relatively normal life in the country’s capital, Kampala. An IT specialist, he did tasks such as fixing computers and configuring routers.
+    <ScrollTextChapter className="max-sm:chapter_dark_background sm:text-right text-center sm:ml-auto sm:w-1/2" position="">
+      George, a young Ugandan man, is leading a relatively normal life in Kampala working as an IT specialist.
     </ScrollTextChapter>
     <ScrollTextChapter className="max-sm:chapter_dark_background" step={true} position="left" >
-      Then COVID hit and that normality, along with his work, disappeared. George is a pseudonym, he's still worried about his safety.
+      Then COVID hits and his work disappears.
     </ScrollTextChapter>
     <ScrollTextChapter className="mb-[80vh]" position="center" step={true}>
       <div className='place-content-center pt-40 mb-20'>
         <div className='mx-auto max-w-[45ch] text-center'>
           <TitleTextBorder
           as={'h1'}
-          className='text-balance text-center font-base text-5xl font-bold md:text-6xl lg:text-7xl'
+          bgClassName='bg-neutral-50'
+          className='text-neutral-800 text-balance text-center font-base text-5xl font-bold md:text-6xl lg:text-7xl'
           >Scam Factories</TitleTextBorder>
           <br />
         </div>
 
-        <div className='mx-auto max-w-[35ch] text-center'>
+        <div className='mx-auto max-w-[25ch] md:max-w-[40ch] text-center'>
           <TitleTextBorder
           as={'h1'}
-          className='text-center font-body text-xl font-bold md:text-3xl'
-          >Inside Southeast Asia’s brutal scam compounds</TitleTextBorder>
+          bgClassName='bg-black'
+          className='text-neutral-50 text-center font-body text-xl font-bold md:text-3xl'
+          >The inside story of Southeast Asia’s fraud compounds</TitleTextBorder>
         </div>
 
-        <h3 className='text-center font-body mt-8 mb-4'>Part three: the rise of an industry</h3>
+        <h3 className='text-center font-body mt-8 mb-4'>Part three: The rise of an industry</h3>
 
         <div className='text-center'>
           <span className='inline-block font-base text-sm'>By [Ivan Franceschini](https://theconversation.com/profiles/ivan-franceschini-1529038), [Ling
-          Li](https://theconversation.com/profiles/ling-li-1529042) and The Conversation Digital Storytelling Team. Photos by Roun Ry and Ivan Franceschini.</span><br/><span className='font-base text-xs opacity-50'>Published: <time className=''>{new Date().toDateString()}</time></span>
+          Li](https://theconversation.com/profiles/ling-li-1529042) and The Conversation Digital Storytelling Team.</span><br/><span className='font-base text-xs opacity-50'>Published: <time className=''>{new Date().toDateString()}</time></span>
         </div>
       </div>
     </ScrollTextChapter>
@@ -101,91 +103,54 @@ import BeforeAfterSlider from './components/BeforeAfterSlider'
   </ScrollBackground>
   <ScrollForeground>
     <ScrollTextChapter step={true} className="mt-[20vh] chapter_dark_background" position="center">
-      Like many Africans, George hoped to change his fortunes in Dubai.
+      Like many Africans, George hopes to change his fortunes in Dubai. (George isn't his real name as he's worried about his safety.)
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
-      But life there was difficult and after two years, he was still struggling to make ends meet.
+      But life is difficult and after two years, he is still struggling to make ends meet.
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
-      Then in August 2022, a friend sent him a well-paid IT job opportunity in Laos and he jumped at it. The job was a six-month contract offering US$1,500 (A$2,400) per month, plus commissions and free accommodation. Everything seemed to check out.
+      In August 2022, a friend points him towards a well-paid job in Laos. It's a six-month contract offering A$2,400 per month, plus commissions and free accommodation. Everything seems to check out.
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
-      George was soon on his way to the Golden Triangle, a lawless area on Laos’ border with Myanmar and Thailand.
+      George is soon on his way to the Golden Triangle, a lawless area on Laos’ border with Myanmar and Thailand.
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
-      Once there, he was asked to sign a contract completely different from what he had discussed in Dubai. He also had to pay a substantial amount of money, the equivalent of US$2,200 (A$3,500).
+      He's given a contract completely different from what he was promised in Dubai. He's asked to pay his new employer the equivalent of A$3,500.
     </ScrollTextChapter>
     <ScrollTextChapter position="center" className="chapter_dark_background">
-      His passport and phone were taken away and he was introduced to his new job: scamming people into putting money into fake investments.
+      His bosses confiscate his passport and phone and he realises he is trapped.
     </ScrollTextChapter>
     <ScrollTextChapter position="center" className="chapter_dark_background">
       <div>
-        <Pullquote className='' quote="The moment they give you a script and tell you, you get to know immediately what you have to do." />
+        <Pullquote className='' quoteClassname='opacity-20' quote="That's when everything started changing." />
+        <Pullquote className='' quoteClassname='opacity-20' startQuoteIcon={false} endQuoteIcon={true} quote="The moment they give you a script and tell you, you get to know immediately what you have to do." />
       </div>
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
-      For two months, George dragged his feet, insisting that he was just an IT guy. Then, one day he was sold to a second scam company in Myanmar, just across the Mekong River.
+      For two months, George drags his feet, insisting that he is just an IT guy. Then, one day he is sold to a second scam company in Myanmar, just across the Mekong River.
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
       <div>
-        <Pullquote className='' quote="They don't tell you [how much they sell you for]. They just tell you: ‘We own you. We bought you.’" />
-        <Pullquote className='' quote="It’s weird. It takes you back to the ages of the slave trade in Africa. It was hard to believe when someone tells you: ‘I own you.’" startQuoteIcon={false}/>
+        <Pullquote className='' quoteClassname='opacity-20' quote="They don't tell you [how much they sell you for]. They just tell you: ‘We own you. We bought you.’" />
+        <Pullquote className='' quoteClassname='opacity-20' startQuoteIcon={false}  endQuoteIcon={true} quote="It takes you back to the ages of the slave trade in Africa." />
       </div>
-    </ScrollTextChapter>
-    <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
-      He was supposed to be gone only for six months — it would take him an entire year to find his way back to Kampala.
     </ScrollTextChapter>
   </ScrollForeground>
 </ScrollSection>
 
-##  The rise of an industry
+##  A booming industry
 
-George’s story is typical of the thousands of victims believed to be working in the scam industry today in Southeast Asia. In the last 30 years, the industry has gone global, raking in billions of dollars every year. 
+George is typical of thousands of victims working in the scam industry in Southeast Asia. In the last 30 years, the industry has gone global, raking in billions of dollars every year.
 
-Exactly how much, though, is difficult to quantify. The UN [estimates](https://www.unodc.org/roseap/en/2024/10/cyberfraud-industry-expands-southeast-asia/story.html) financial losses due to scams targeting victims in East and Southeast Asia in 2023 to be anywhere from US$18 to 37 billion (A$28 to 59 billion).
+Exactly how much is hard to quantify. The The UN [estimates](https://www.unodc.org/roseap/en/2024/10/cyberfraud-industry-expands-southeast-asia/story.html) victims in East and Southeast Asia lost anywhere from A$28 to 59 billion in 2023. That same year Americans are [estimated](https://www.ftc.gov/news-events/news/press-releases/2024/02/nationwide-fraud-losses-top-10-billion-2023-ftc-steps-efforts-protect-public) to have lost more than A$15.5 billion in investment scams alone.
 
-In China, one of the main targets of scammers, authorities managed to [stop scams](https://m.yicai.com/news/101950838.html) valuing some 328.8 billion yuan in 2023, or roughly A$68 billion. 
+The online scam industry started in Taiwan in the 1990s and quickly spread to China. In recent years new operations have sprung up across Cambodia, the Philippines, Myanmar and Laos, lured by lax regulation and local elites willing to turn a blind eye.
 
-In the United States, the Federal Trade Commission [reported](https://www.ftc.gov/news-events/news/press-releases/2024/02/nationwide-fraud-losses-top-10-billion-2023-ftc-steps-efforts-protect-public) Americans lost more than US$10 billion (A$15.5 billion) to scams in 2023, with most lost in investment scams.
+The scam factories also need high speed internet and office space and are often set up alongside casinos or online gambling operations.
 
-<div className='relative my-10 grid grid-cols-[minmax(5rem,10%)_1fr] sm:grid-cols-[minmax(8rem,10%)_1fr] gap-4 border-y border-neutral-500 py-4'>
-  <div className='not-prose aspect-square w-full overflow-hidden rounded-md'>
-    <img src="https://images.theconversation.com/files/645965/original/file-20250130-15-bubzm1.png?ixlib=rb-4.1.0&q=20&auto=format&w=300" alt='' className='not_fullscreen_media' />
-  </div>
-  <p className='!mb-0 !mt-0 italic'>Scam Factories is a special multimedia and podcast series by The Conversation. Listen to part 1 of the <a href='#' target='_parent' className='text-neutral-100 hover:text-neutral-200'>podcast series here</a>. Read part 4 of the digital series, <a href='https://scam-factories-getting-out.netlify.app/' target='_blank' className='text-neutral-100 hover:text-neutral-200'>Freedom, here</a>.</p>
-</div>
+In Cambodia's once-quiet coastal city of Sihanoukville the gambling industry [started taking off](https://globalchinapulse.net/sihanoukville-rise-and-fall-of-a-frontier-city/) in 2017.
 
-The online scam industry got its start in the 1990s in Taiwan, but soon shifted to mainland China, with many operations based in southern Fujian province. In recent years, it has truly gone global.
-
-What attracted operators to countries like Cambodia, the Philippines, Myanmar and Laos, in particular, were the lack of regulations, lax law enforcement and protective umbrella of local elites willing to shield them from scrutiny. The close proximity to Taiwan and mainland China also ensured a steady supply of Chinese-speaking workers to target victims in China.
-
-<Image
-  src='https://images.theconversation.com/files/611308/original/file-20240805-19-pv3hzl.jpg'
-  align=''
-  imgClassName='aspect-[3/2]'
-  loading='lazy'
-  alt='Outside view of the Kaibo Hotel and Casino'
-  source='Photo: Roun Ry'
-  caption='Outside view of the Kaibo Hotel and Casino (now renamed as Kabin Hotel) with annexed compound in Otres Village, Sihanoukville, September 2022. Media reports have uncovered brutal treatment of people working in this compound and the broader area has become synonymous with violent crime.'
-/> 
-
-In addition, these scam operations require decent infrastructure, especially internet connectivity, telecommunications and office space. As a result, many emerged in connection with existing casinos or online gambling operations. 
-
-In Cambodia, for example, the coastal city of Sihanoukville saw a [massive influx of Chinese investment](https://globalchinapulse.net/sihanoukville-rise-and-fall-of-a-frontier-city/) in the gambling and entertainment industry starting around 2017. Overnight, the once-sleepy city became awash with neon. Casinos, high-end hotels and condos went up everywhere.
-
-By 2019, the city was booming, bringing in an [estimated](https://asia.nikkei.com/Business/Business-Spotlight/In-Cambodia-s-boomtown-a-gamble-on-Chinese-money-goes-sour) US$3.5 to 5 billion (A$5.5 to 8 billion) a year. About 90% of this came from online gambling.
-
-<Image
-  src='https://images.theconversation.com/files/611365/original/file-20240805-21-hrgrhj.jpg'
-  align=''
-  imgClassName='aspect-[3/2]'
-  loading='lazy'
-  alt='A night aerial shot of Sihanoukville, Cambodia.'
-  source='Photo: Roun Ry'
-  caption='Sihanoukville was a thriving city that built its ecomnomy using casinos, gambling and construction.'
-/> 
-
-When the Cambodian government suddenly [cracked down](https://www.scmp.com/comment/opinion/article/3025687/how-cambodias-online-gambling-ban-sparked-great-chinese-exodus-2019) on online gambling in 2019, however, many of these operators abruptly shut down, leaving behind a massive infrastructure for scammers to use.
+By 2019, high-end hotels and condos dominated the skyline and gambling was generating billions a year for the local economy.
 
 <BeforeAfterSlider
   beforeSrc='https://images.theconversation.com/files/645686/original/file-20250130-15-dml083.jpg'
@@ -199,11 +164,41 @@ When the Cambodian government suddenly [cracked down](https://www.scmp.com/comme
   sliderPosition={30}
 />
 
-In the Philippines, then-President Rodrigo Duterte [legalised](https://taiwaninsight.org/2021/02/04/going-to-paradise-the-online-gambling-industry-and-taiwanese-pogos-workers-in-the-philippines/) online gambling operations in major cities in 2016 in an effort to regulate the freewheeling industry and collect revenue for the state. 
+<div className='relative my-10 grid grid-cols-[minmax(5rem,10%)_1fr] sm:grid-cols-[minmax(8rem,10%)_1fr] gap-4 border-y border-neutral-500 py-4'>
+  <div className='not-prose aspect-square w-full overflow-hidden rounded-md'>
+    <img src="https://images.theconversation.com/files/645965/original/file-20250130-15-bubzm1.png?ixlib=rb-4.1.0&q=20&auto=format&w=300" alt='' className='not_fullscreen_media' />
+  </div>
+  <p className='!mb-0 !mt-0 italic'>Scam Factories is a special multimedia and podcast series by The Conversation. Listen to part 1 of the <a href='#' target='_parent' className='text-neutral-100 hover:text-neutral-200'>podcast series here</a>.</p>
+</div>
 
-However, many of these operations soon became fronts for the lucrative scam industry, with [links to organised crime](https://edition.cnn.com/2024/07/23/asia/philippines-pogos-ban-illegal-gambling-intl-hnk/index.html). In response, the current president, Ferdinand Marcos Jr., banned all online gaming operations last year. 
+<Image
+  src='https://images.theconversation.com/files/611308/original/file-20240805-19-pv3hzl.jpg'
+  align=''
+  imgClassName='aspect-[3/2]'
+  loading='lazy'
+  alt='Outside view of the Kaibo Hotel and Casino'
+  source='Photo: Roun Ry'
+  caption='Outside view of the Kaibo Hotel and Casino (now renamed as Kabin Hotel) with annexed compound in Otres Village, Sihanoukville, September 2022. Media reports have uncovered brutal treatment of people working in this compound and the broader area has become synonymous with violent crime.'
+/> 
+
+The Cambodian government [cracked down](https://www.scmp.com/comment/opinion/article/3025687/how-cambodias-online-gambling-ban-sparked-great-chinese-exodus-2019) on online gambling in 2019 and many of these operators were shut down, leaving the scammers to take advantage of the deserted facilities.
+
+<Image
+  src='https://images.theconversation.com/files/611365/original/file-20240805-21-hrgrhj.jpg'
+  align=''
+  imgClassName='aspect-[3/2]'
+  loading='lazy'
+  alt='A night aerial shot of Sihanoukville, Cambodia.'
+  source='Photo: Roun Ry'
+  caption='Sihanoukville was a thriving city that built its ecomnomy using casinos, gambling and construction.'
+/> 
+
+
+A similar scenario played out in the Philippines after online gambling was [legalised](https://taiwaninsight.org/2021/02/04/going-to-paradise-the-online-gambling-industry-and-taiwanese-pogos-workers-in-the-philippines/) in 2016. Within a few years, many of these operations had become fronts for the scam industry, leading to a decision last year to [reinstate a ban](https://edition.cnn.com/2024/07/23/asia/philippines-pogos-ban-illegal-gambling-intl-hnk/index.html) on online gambling.
 
 It's a different story in Myanmar. Gambling was long outlawed here, but some casinos did spring up in the areas on the Chinese and Thai borders controlled by armed ethnic groups. These areas became hubs for myriad criminal operations, including the scamming industry.
+
+Scamming started to take hold alongside casinos in Myanmar too.
 
 <ScrollSection pinType="pin_clipped" className="mb-12" id='kk_park'>
   <ScrollBackground bgClassName='kk_park_sat_wrapper'>
@@ -295,29 +290,25 @@ It's a different story in Myanmar. Gambling was long outlawed here, but some cas
   </ScrollBackground>
   <ScrollForeground>
     <ScrollTextChapter className="chapter_dark_background" position="center">
-      The growth of the KK Park scam compound on the Myanmar-Thailand border is illustrative of how quickly the industry has grown.
+      This is the KK scam compound on the Myanmar-Thailand border.
     </ScrollTextChapter>
     <ScrollTextChapter className="chapter_dark_background" step={true} position="left" >
-      As recently as October 2019, satellite images show the area to be agricultural land.
+      In October 2019 the area is agricultural land.
     </ScrollTextChapter>
     <ScrollTextChapter className="chapter_dark_background" position="center" step={true}>
-      Construction began soon after. In just a few years, the area became one of Myanmar’s most notorious scam compounds.
+      Soon after construction begins. In just a few years, it will become one of Myanmar’s most notorious scam compounds.
     </ScrollTextChapter>
     <ScrollTextChapter className="chapter_dark_background" position="right" step={true}>
-      As of early 2024, KK Park and other adjacent compounds covered some 7.5 square kilometres of land.
+      Currently KK Park and its surrounds cover about 7.5 square kilometres.
     </ScrollTextChapter>
   </ScrollForeground>
 </ScrollSection>
 
-{/* The industry boomed in the border areas when civil war broke out following the 2021 military coup. The Chinese government has grown increasingly frustrated as the scam centres have flourished, trapping tens of thousands of Chinese workers and shielding wanted fugitives.  */}
-
-The sheer size of the industry makes it difficult to assess exactly how many compounds exist in the region in total. Through victim testimonies and monitoring of media reports, court and police reports and Telegram channels, we have identified more than 300 sites in Cambodia, Myanmar, the Philippines and Laos. There will no doubt be many more.
+So far, we've identified more than 300 scamming sites across Cambodia, Myanmar, the Philippines and Laos. There are likely to be many more.
 
 <Infographic src='https://datawrapper.dwcdn.net/Nk6G7/' useDarkMade={false} className='aspect-[750/511]'/>
 
-## Shadowy figures pulling the strings 
-
-As the scam industry took root in Southeast Asia, criminal syndicates realised they could scale up their activities quickly. 
+## Sophisticated operations run by shadowy figures
 
 <Image
   src='https://images.theconversation.com/files/644285/original/file-20250123-18-mpdjcr.jpeg?ixlib=rb-4.1.0q=45&auto=format&w=500&dpr=1'
@@ -330,11 +321,14 @@ As the scam industry took root in Southeast Asia, criminal syndicates realised t
   caption=''
 /> 
 
-Scam operations were initially small-scale in nature, mostly located in apartments, villas and hotel rooms. By the mid-2010s, however, they began to coalesce in bigger, purpose-built compounds, with offices, dormitories, shops, entertainment venues and other amenities for workers. Many have clubs similar to brothels, where young women provide sexual services to managers and scammers as a reward for good performances.
+In recent years the scam industry has become increasingly professional. They've built bigger compounds, with offices, dormitories, shops, entertainment venues and other amenities for workers. Many have clubs similar to brothels, where young women provide sexual services to managers and scammers as a reward for good performances. 
+
+Some now have departments overseeing operations, human resources and IT.
 
 <HeirarchyGraphic />
 
-These compounds have also become more professional and are now run like "proper" companies. They have departments in charge of different sides of the business, such as operations, human resources, and the design, maintenance and troubleshooting of the software they use. External platforms [facilitate money laundering](https://globalchinapulse.net/moving-bricks-money-laundering-practices-in-the-online-scam-industry/). 
+It's hard to identify who is at the top of the hierarchy but it's clear that criminal figures and triad groups are involved. Scam compounds are also linked to local politicians and power brokers. In Cambodia police largely turn a blind eye to the industry. One officer [told](https://vodenglish.news/body-found-hanging-in-sihanoukvilles-alleged-slave-compound-area/) a local news agency in 2022: "These places don’t allow us to go in".
+
 
 <Image
   src='https://images.theconversation.com/files/611302/original/file-20240805-19-yyuymh.jpg'
@@ -347,17 +341,15 @@ These compounds have also become more professional and are now run like "proper"
   caption='A quiet street in the Jinshui compound in Otres Village, Sihanoukville'
 /> 
 
-Most compounds are heavily securitised, with barred windows, barbed-wire-topped fences and surveillance cameras. George, the IT worker from Uganda, describes the compound he was sold to in Myanmar as a “prison”.
 
-<Pullquote className='' quote="At the gate you find 15 people manning the gate, then each office would have a security guard outside […] And during work, eight guards just sit there waiting for you. There’s no escaping." />
 
-In many cases, it is extremely challenging to identify who is at the top of the hierarchy. While well-established criminal figures and triad groups are clearly involved, the industry appears to be dominated by a broad array of business-oriented groups that enter into partnerships with one another and the local elites where they operate. 
+{/* <Pullquote className='' quote="At the gate you find 15 people manning the gate, then each office would have a security guard outside […] And during work, eight guards just sit there waiting for you. There’s no escaping." /> */}
 
-Many of these groups are led by ethnic Chinese individuals, in some cases fugitives wanted by the Chinese government who have acquired multiple citizenships. But they are flanked by a very diverse cohort of people. 
+When we were in Sihanoukville in 2022, the government launched a crackdown on the industry. We saw firsthand how quickly the compounds were evacuated. They had clearly been tipped off. 
 
-For instance, in Cambodia, researchers and journalists have compiled substantial evidence tying scam compounds to local politicians and businesspeople, which allows them to operate without running afoul of local law enforcement. In addition, these powerful elites are increasingly becoming financiers and owners of scam compounds themselves.
+Within months many of the scam centres were back in business.
 
-<Image
+{/* <Image
   src='https://images.theconversation.com/files/644317/original/file-20250123-15-gjki5i.jpeg'
   align=''
   className=''
@@ -368,10 +360,6 @@ For instance, in Cambodia, researchers and journalists have compiled substantial
   caption=''
 /> 
 
-Far from shying away from the spotlight, some of these actors lead very public lives. They flaunt their flamboyant lifestyles on social media and openly brag about making donations to charities run by entities linked to local authorities, as well as local law enforcement agencies
-
-In Cambodia, the police have largely turned a blind eye to the industry. In some cases, they have suggested the compounds simply cannot be policed. One officer [told](https://vodenglish.news/body-found-hanging-in-sihanoukvilles-alleged-slave-compound-area/) a Cambodian news outlet in 2022: "These places don’t allow us to go in". 
-
 <Image
   src='https://images.theconversation.com/files/644282/original/file-20250123-17-nrcimo.jpeg'
   align=''
@@ -381,21 +369,9 @@ In Cambodia, the police have largely turned a blind eye to the industry. In some
   alt=''
   source='Photo: Ivan Franceschini'
   caption=''
-/>
+/> */}
 
-While crackdowns occur periodically, well-connected operators remain largely unscathed, and the industry continues to thrive.
-
-There is also ample evidence from our victim testimonies that compound managers have a direct line of communication with the local authorities and police. When we were in Sihanoukville in 2022, the government launched a crackdown on the industry. We saw firsthand how quickly the compounds were able to shut down and transfer their staff before any raids occurred. They clearly had been given advance notice. 
-
-Crackdowns are also temporary. By 2023, many scam centres in Cambodia were back in business. Some had merely cleaned up their facades a bit and erected signs to look more like legitimate businesses. Public donations to charities linked to the Cambodian political elite began to flow again, too.
-
-## Here to stay
-
-If our research over the past few years has taught us anything, it's that the money behind these operations is very mobile. Scam operations frequently move within the region, but have also expanded to Serbia, Turkey, Georgia, Mexico, Peru, and some parts of Africa in recent years. 
- 
-These scam compounds will continue to evolve, but the industry on the whole is no doubt here to stay.
-
-_In part 4 of our series tomorrow, we'll describe how victims get out of scam compounds and the difficulties they face getting home._
+_In the final part of our series tomorrow, we'll describe how victims escape scam compounds and the difficulties they face getting home._
 
 <AuthorSection>
  <Acknowledgements>

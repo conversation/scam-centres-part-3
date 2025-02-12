@@ -51,8 +51,8 @@ export default function HeirarchyGraphic() {
         </div>
       </div>
       <figcaption>
-        This is the way one compound in Myanmar was structured, according to a
-        survivor we interviewed.{" "}<span className="opacity-70">Source: Author provided</span>
+        This is the way one compound in Myanmar was structured.{" "}
+        <span className="opacity-70">Source: Author provided</span>
       </figcaption>
     </figure>
   );
