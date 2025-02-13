@@ -126,11 +126,12 @@ export default {
               objectFit: "cover",
             },
             figcaption: {
+              color: theme("colors.neutral[600]/50"),
               fontFamily: theme("fontFamily.base"),
               width: ARTICLEWIDTH.widthCalc,
               marginInline: "auto",
               "@screen md": {
-                marginInline: 0,
+                // marginInline: 0
               },
             },
 
@@ -192,6 +193,7 @@ export default {
               objectFit: "cover",
             },
             figcaption: {
+              color: theme("colors.neutral[300]/50"),
               fontFamily: theme("fontFamily.base"),
               width: ARTICLEWIDTH.widthCalc,
               marginInline: "auto",
