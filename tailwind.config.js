@@ -80,6 +80,8 @@ export default {
       },
       white: "#ffffff",
       black: "#000000",
+      transparent: "transparent",
+      current: "currentcolor",
     },
     fontFamily: {
       base: '"Montserrat", "Helvetica Neue", "Helvetica", sans-serif',
@@ -126,7 +128,7 @@ export default {
               objectFit: "cover",
             },
             figcaption: {
-              color: theme("colors.neutral[600]/50"),
+              opacity: 0.9,
               fontFamily: theme("fontFamily.base"),
               width: ARTICLEWIDTH.widthCalc,
               marginInline: "auto",
@@ -193,7 +195,7 @@ export default {
               objectFit: "cover",
             },
             figcaption: {
-              color: theme("colors.neutral[300]/50"),
+              opacity: 0.7,
               fontFamily: theme("fontFamily.base"),
               width: ARTICLEWIDTH.widthCalc,
               marginInline: "auto",
