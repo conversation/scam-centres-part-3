@@ -98,7 +98,7 @@
   }
 
   .chapter_wrapper > * {
-    @apply pointer-events-auto text-balance;
+    @apply pointer-events-auto;
   }
 
   .chapter_dark_background > * {
@@ -123,7 +123,7 @@
     @apply items-center;
   }
   .chapter_wrapper.center > * {
-    @apply text-center sm:max-w-[80%];
+    @apply text-center sm:max-w-[60%];
   }
 
   /* ----- FOR THE PINNED BACKGROUND  ----- */
