@@ -157,8 +157,9 @@ export function ScrollSection({
         })
         .fromTo(
           backgroundImages,
-          { scale: 1.5 },
-          { scale: 1, ease: "power1.inOut" }
+          { scale: 1.5, yPercent: 15 },
+          { scale: 1, yPercent: 0, ease: "power1.inOut" },
+          0
         );
     },
     { scope: sectionRef }
