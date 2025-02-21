@@ -16,7 +16,7 @@ export default function Readmore() {
       </div>
       <p className="!mb-0 !mt-0 italic">
         <a
-          href="#"
+          href="https://theconversation.com/scam-factories-the-inside-story-of-southeast-asias-brutal-fraud-compounds-250448"
           target="_parent"
           className="text-neutral-100 hover:text-neutral-200"
         >
@@ -25,7 +25,7 @@ export default function Readmore() {
         is a special multimedia and podcast series by The Conversation. Listen
         to the{" "}
         <a
-          href="#"
+          href="https://theconversation.com/scam-factories-the-inside-story-of-southeast-asias-brutal-fraud-compounds-250448"
           target="_parent"
           className="text-neutral-100 hover:text-neutral-200"
         >
