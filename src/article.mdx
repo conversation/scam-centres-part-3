@@ -1,26 +1,46 @@
-import { ARTICLEWIDTH } from './util/constants'
-import Image from './components/Image'
-import BackgroundImage from './components/BackgroundImage'
-import { ScrollSection, ScrollForeground, ScrollTextChapter, ScrollBackground } from './components/ScrollSection'
-import TitleSection from './components/TitleSection'
-import Picture from './components/Picture'
-import Infographic from './components/Infographic'
-import Pullquote from './components/Pullquote'
-import HeirarchyGraphic from './components/HeirarchyGraphic'
-import ArticleSetup from './context/ArticleSetup'
-import AuthorSection, { Editorial, Author, Editors, Authors, Disclosures, Acknowledgements } from './components/Authors'
-import GeorgeMap from './components/GeorgeMap'
-import TitleTextBorder from './components/TitleTextBorder'
-import BeforeAfterSlider from './components/BeforeAfterSlider'
-import Readmore from './components/Readmore'
+import { ARTICLEWIDTH } from "./util/constants";
+import Image from "./components/Image";
+import BackgroundImage from "./components/BackgroundImage";
+import {
+  ScrollSection,
+  ScrollForeground,
+  ScrollTextChapter,
+  ScrollBackground,
+} from "./components/ScrollSection";
+import TitleSection from "./components/TitleSection";
+import Picture from "./components/Picture";
+import Infographic from "./components/Infographic";
+import Pullquote from "./components/Pullquote";
+import HeirarchyGraphic from "./components/HeirarchyGraphic";
+import ArticleSetup from "./context/ArticleSetup";
+import AuthorSection, {
+  Editorial,
+  Author,
+  Editors,
+  Authors,
+  Disclosures,
+  Acknowledgements,
+} from "./components/Authors";
+import GeorgeMap from "./components/GeorgeMap";
+import TitleTextBorder from "./components/TitleTextBorder";
+import BeforeAfterSlider from "./components/BeforeAfterSlider";
+import Readmore from "./components/Readmore";
 
 <ArticleSetup
-  theme='dark'
-  title='Rise of an industry'
+  theme="dark"
+  title="Rise of an industry"
   dropCap={true}
-  author='Ivan Franceschini & Ling Li'
-  image='https://images.theconversation.com/files/611365/original/file-20240805-21-hrgrhj.jpg?fit=crop&auto=format,compress&q=15&dpr=1&w=500&ar=3:2'
-  keywords={['Southeast Asia', 'Cambodia', 'Myanmar', 'scam', 'scam centre', 'scammers', 'Chinese scams']}
+  author="Ivan Franceschini & Ling Li"
+  image="https://images.theconversation.com/files/611365/original/file-20240805-21-hrgrhj.jpg?fit=crop&auto=format,compress&q=15&dpr=1&w=500&ar=3:2"
+  keywords={[
+    "Southeast Asia",
+    "Cambodia",
+    "Myanmar",
+    "scam",
+    "scam centre",
+    "scammers",
+    "Chinese scams",
+  ]}
   standfirst="Scamming is big business in Southeast Asia, on an almost unstoppable rise."
 />
 
@@ -94,6 +114,7 @@ import Readmore from './components/Readmore'
         </div>
       </div>
     </ScrollTextChapter>
+
   </ScrollForeground>
 </ScrollSection>
 
@@ -102,49 +123,99 @@ import Readmore from './components/Readmore'
     <GeorgeMap />
   </ScrollBackground>
   <ScrollForeground>
-    <ScrollTextChapter step={true} className="mt-[20vh] chapter_dark_background text-center sm:w-4/5" position="">
-      Like many Africans, George hopes to change his fortunes in Dubai. (George isn't his real name as he's worried about his safety.)
+    <ScrollTextChapter
+      step={true}
+      className="mt-[20vh] chapter_dark_background text-center sm:w-4/5"
+      position="">
+      Like many Africans, George hopes to change his fortunes in Dubai. (George
+      isn't his real name as he's worried about his safety.)
     </ScrollTextChapter>
-    <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
-      But life is difficult and after two years, he is still struggling to make ends meet.
+    <ScrollTextChapter
+      step={true}
+      position="center"
+      className="chapter_dark_background">
+      But life is difficult and after two years, he is still struggling to make
+      ends meet.
     </ScrollTextChapter>
-    <ScrollTextChapter step={true} position="" className="chapter_dark_background text-center sm:w-4/5">
-      In August 2022, a friend points him to a well-paid job in Laos. It's a six-month contract offering US$1,500 per month, plus commissions and free accommodation. Everything seems to check out.
+    <ScrollTextChapter
+      step={true}
+      position=""
+      className="chapter_dark_background text-center sm:w-4/5">
+      In August 2022, a friend points him to a well-paid job in Laos. It's a
+      six-month contract offering US$1,500 per month, plus commissions and free
+      accommodation. Everything seems to check out.
     </ScrollTextChapter>
-    <ScrollTextChapter step={true} position="center" className="chapter_dark_background">
-      George is soon on his way to the Golden Triangle, a lawless area on Laos’ border with Myanmar and Thailand.
+    <ScrollTextChapter
+      step={true}
+      position="center"
+      className="chapter_dark_background">
+      George is soon on his way to the Golden Triangle, a lawless area on Laos’
+      border with Myanmar and Thailand.
     </ScrollTextChapter>
-    <ScrollTextChapter step={true} position="" className="chapter_dark_background text-center">
-      He's given a contract completely different from what he was promised in Dubai. He's asked to pay his new employer the equivalent of US$2,200.
+    <ScrollTextChapter
+      step={true}
+      position=""
+      className="chapter_dark_background text-center">
+      He's given a contract completely different from what he was promised in
+      Dubai. He's asked to pay his new employer the equivalent of US$2,200.
     </ScrollTextChapter>
     <ScrollTextChapter position="center" className="chapter_dark_background">
-      His bosses confiscate his passport and phone and he realises he is trapped.
+      His bosses confiscate his passport and phone and he realises he is
+      trapped.
     </ScrollTextChapter>
     <ScrollTextChapter position="" className="chapter_dark_background">
       <div>
-        <Pullquote className='!mt-5' quoteClassname='opacity-20' quote="That's when everything started changing." />
-        <Pullquote className='!mb-5' quoteClassname='opacity-20' startQuoteIcon={false} endQuoteIcon={true} quote="The moment they give you a script and tell you, you get to know immediately what you have to do." />
+        <Pullquote
+          className="!mt-5"
+          quoteClassname="opacity-20"
+          quote="That's when everything started changing."
+        />
+        <Pullquote
+          className="!mb-5"
+          quoteClassname="opacity-20"
+          startQuoteIcon={false}
+          endQuoteIcon={true}
+          quote="The moment they give you a script and tell you, you get to know immediately what you have to do."
+        />
       </div>
     </ScrollTextChapter>
-    <ScrollTextChapter step={true} position="" className="chapter_dark_background text-center">
-      For two months, George drags his feet and refuses to do any scams, insisting he is just an IT guy. Then, one day, he is sold to a second scam company in Myanmar, just across the Mekong River.
+    <ScrollTextChapter
+      step={true}
+      position=""
+      className="chapter_dark_background text-center">
+      For two months, George drags his feet and refuses to do any scams,
+      insisting he is just an IT guy. Then, one day, he is sold to a second scam
+      company in Myanmar, just across the Mekong River.
     </ScrollTextChapter>
-    <ScrollTextChapter step={true} position="" className="chapter_dark_background">
+    <ScrollTextChapter
+      step={true}
+      position=""
+      className="chapter_dark_background">
       <div>
-        <Pullquote className='!mt-5' quoteClassname='opacity-20' quote="They don't tell you [how much they sell you for]. They just tell you: ‘We own you. We bought you.’" />
-        <Pullquote className='!mb-5' quoteClassname='opacity-20' startQuoteIcon={false}  endQuoteIcon={true} quote="It takes you back to the ages of the slave trade in Africa." />
+        <Pullquote
+          className="!mt-5"
+          quoteClassname="opacity-20"
+          quote="They don't tell you [how much they sell you for]. They just tell you: ‘We own you. We bought you.’"
+        />
+        <Pullquote
+          className="!mb-5"
+          quoteClassname="opacity-20"
+          startQuoteIcon={false}
+          endQuoteIcon={true}
+          quote="It takes you back to the ages of the slave trade in Africa."
+        />
       </div>
     </ScrollTextChapter>
   </ScrollForeground>
 </ScrollSection>
 
-##  A booming industry
+## A booming industry
 
 George is typical of thousands of victims working in the scam industry in Southeast Asia. In the last 30 years, the industry has gone global, raking in billions of dollars every year.
 
 Exactly how much is hard to quantify. The UN [estimates](https://www.unodc.org/roseap/en/2024/10/cyberfraud-industry-expands-southeast-asia/story.html) victims in East and Southeast Asia lost anywhere from US$18–37 billion in 2023. That same year, Americans are [estimated](https://www.ftc.gov/news-events/news/press-releases/2024/02/nationwide-fraud-losses-top-10-billion-2023-ftc-steps-efforts-protect-public) to have lost more than US$10 billion to scammers.
 
-The online scam industry got its start in Asia in the 1990s, first in Taiwan, then spreading to China. When authorities in both countries began targeting these schemes, scammers started looking for new bases for their operations. 
+The online scam industry got its start in Asia in the 1990s, first in Taiwan, then spreading to China. When authorities in both countries began targeting these schemes, scammers started looking for new bases for their operations.
 
 In the 2010s, they began springing up across [Cambodia](https://globalchinapulse.net/transnational-crime-meets-embedded-corruption-in-cambodia), the Philippines, Myanmar and Laos, lured by lax regulation and local elites willing to turn a blind eye – and actively support and benefit from the industry.
 
@@ -152,47 +223,51 @@ Because the scam compounds also needed high speed internet and office space, the
 
 So far, we've identified more than 300 scamming sites across Cambodia, Myanmar, the Philippines and Laos. There are likely to be many more.
 
-<Infographic src='https://datawrapper.dwcdn.net/Nk6G7/' useDarkMade={false} className='aspect-[750/511]'/>
+<Infographic
+  src="https://datawrapper.dwcdn.net/Nk6G7/"
+  useDarkMade={false}
+  className="aspect-[750/511]"
+/>
 
 In Cambodia's once-quiet coastal city of Sihanoukville, the gambling industry [started taking off](https://globalchinapulse.net/sihanoukville-rise-and-fall-of-a-frontier-city/) in 2017.
 
 <BeforeAfterSlider
-  beforeSrc='https://images.theconversation.com/files/645686/original/file-20250130-15-dml083.jpg'
-  afterSrc='https://images.theconversation.com/files/645486/original/file-20250129-15-j565ud.jpg'
-  className=''
-  sliderClassName='aspect-[839/472]'
-  loading='lazy'
-  source='Satellite image: Google'
+  beforeSrc="https://images.theconversation.com/files/645686/original/file-20250130-15-dml083.jpg"
+  afterSrc="https://images.theconversation.com/files/645486/original/file-20250129-15-j565ud.jpg"
+  className=""
+  sliderClassName="aspect-[839/472]"
+  loading="lazy"
+  source="Satellite image: Google"
   caption="Satellite images from 2016 (left) and 2021 (right) show the spread of a massive development zone, with known scam compounds, outside Sihanoukville."
-  alt='Satellite images from 2016 and 2021 of a massive development zone outside Sihanoukville.'
+  alt="Satellite images from 2016 and 2021 of a massive development zone outside Sihanoukville."
   sliderPosition={30}
 />
 
 By 2019, glitzy, high-end hotels and condos – and plenty of unfinished construction projects – dominated the skyline, and gambling was generating billions a year for the local economy.
 
 <Image
-  src='https://images.theconversation.com/files/611308/original/file-20240805-19-pv3hzl.jpg'
-  align=''
-  imgClassName='aspect-[3/2]'
-  loading='lazy'
-  alt='The public-facing hotel and casino annexed to the Kaibo compound, Otres Village, Sihanoukville.'
-  source='Photo: Roun Ry'
-  caption='The public-facing hotel and casino annexed to the Kaibo compound, Otres Village, Sihanoukville.'
-/> 
+  src="https://images.theconversation.com/files/611308/original/file-20240805-19-pv3hzl.jpg"
+  align=""
+  imgClassName="aspect-[3/2]"
+  loading="lazy"
+  alt="The public-facing hotel and casino annexed to the Kaibo compound, Otres Village, Sihanoukville."
+  source="Photo: Roun Ry"
+  caption="The public-facing hotel and casino annexed to the Kaibo compound, Otres Village, Sihanoukville."
+/>{" "}
 
 <Readmore />
 
 The boom was short-lived. The Cambodian government [cracked down](https://www.scmp.com/comment/opinion/article/3025687/how-cambodias-online-gambling-ban-sparked-great-chinese-exodus-2019) on online gambling that year and many of these operators were shut down, leaving the scammers to take advantage of the deserted facilities. Laid-off workers from the casinos and online gambling operations also migrated into the scamming industry – or were just kidnapped off the streets.
 
 <Image
-  src='https://images.theconversation.com/files/611365/original/file-20240805-21-hrgrhj.jpg'
-  align=''
-  imgClassName='aspect-[3/2]'
-  loading='lazy'
-  alt='A night aerial shot of Sihanoukville, Cambodia.'
-  source='Photo: Roun Ry'
+  src="https://images.theconversation.com/files/611365/original/file-20240805-21-hrgrhj.jpg"
+  align=""
+  imgClassName="aspect-[3/2]"
+  loading="lazy"
+  alt="A night aerial shot of Sihanoukville, Cambodia."
+  source="Photo: Roun Ry"
   caption="Sihanoukville's economy has been built on casinos, gambling and construction."
-/> 
+/>{" "}
 
 A similar scenario played out in the Philippines after [new regulations](https://taiwaninsight.org/2021/02/04/going-to-paradise-the-online-gambling-industry-and-taiwanese-pogos-workers-in-the-philippines/) for the licensing of online gambling operations were adopted in 2016. Within a few years, many of these newly licensed operations had become fronts for the scam industry, leading to a decision last year to [ban](https://edition.cnn.com/2024/07/23/asia/philippines-pogos-ban-illegal-gambling-intl-hnk/index.html) them.
 
@@ -200,74 +275,74 @@ It's a different story in Myanmar. Gambling was long outlawed here, but some cas
 
 The industry then boomed in these border areas when civil war broke out following the 2021 military coup.
 
-<ScrollSection pinType="pin_clipped" className="mb-12" id='kk_park'>
-  <ScrollBackground bgClassName='kk_park_sat_wrapper'>
+<ScrollSection pinType="pin_clipped" className="mb-12" id="kk_park">
+  <ScrollBackground bgClassName="kk_park_sat_wrapper">
     <Picture
-      src='https://images.theconversation.com/files/649397/original/file-20250217-32-1k3kry.jpg'
-      loading='eager'
-      className='full_screen_media make_visible '
-      imgClassName='object-bottom-center '
-      caption=''
-      source='Source: Google Maps'
-      sourceLink=''
-      alt=''
+      src="https://images.theconversation.com/files/649397/original/file-20250217-32-1k3kry.jpg"
+      loading="eager"
+      className="full_screen_media make_visible "
+      imgClassName="object-bottom-center "
+      caption=""
+      source="Source: Google Maps"
+      sourceLink=""
+      alt=""
       focalPoint={{
-        mobile: { x: 0.4, y: 0.5},
-        tablet: { x: 0.4, y: 0.55},
-        tabletLandscape: { x: 0.4, y: 0.55},
-        laptop: { x: 0.4, y: 0.55},
-        desktop: { x: 0.4, y: 0.55}
+        mobile: { x: 0.4, y: 0.5 },
+        tablet: { x: 0.4, y: 0.55 },
+        tabletLandscape: { x: 0.4, y: 0.55 },
+        laptop: { x: 0.4, y: 0.55 },
+        desktop: { x: 0.4, y: 0.55 },
       }}
     />
     <Picture
-      src='https://images.theconversation.com/files/649398/original/file-20250217-32-kf0cho.jpg'
-      loading='lazy'
-      className='full_screen_media'
-      imgClassName='object-bottom-center'
-      caption=''
-      source='Source: Google Maps'
-      sourceLink=''
-      alt=''
+      src="https://images.theconversation.com/files/649398/original/file-20250217-32-kf0cho.jpg"
+      loading="lazy"
+      className="full_screen_media"
+      imgClassName="object-bottom-center"
+      caption=""
+      source="Source: Google Maps"
+      sourceLink=""
+      alt=""
       focalPoint={{
-        mobile: { x: 0.4, y: 0.5},
-        tablet: { x: 0.4, y: 0.55},
-        tabletLandscape: { x: 0.4, y: 0.55},
-        laptop: { x: 0.4, y: 0.55},
-        desktop: { x: 0.4, y: 0.55}
+        mobile: { x: 0.4, y: 0.5 },
+        tablet: { x: 0.4, y: 0.55 },
+        tabletLandscape: { x: 0.4, y: 0.55 },
+        laptop: { x: 0.4, y: 0.55 },
+        desktop: { x: 0.4, y: 0.55 },
       }}
     />
     <Picture
-      src='https://images.theconversation.com/files/649399/original/file-20250217-50-2gnwgg.jpg'
-      loading='lazy'
-      className='full_screen_media'
-      imgClassName='object-bottom-center'
-      caption=''
-      source='Source: Google Maps'
-      sourceLink=''
-      alt=''
+      src="https://images.theconversation.com/files/649399/original/file-20250217-50-2gnwgg.jpg"
+      loading="lazy"
+      className="full_screen_media"
+      imgClassName="object-bottom-center"
+      caption=""
+      source="Source: Google Maps"
+      sourceLink=""
+      alt=""
       focalPoint={{
-        mobile: { x: 0.4, y: 0.5},
-        tablet: { x: 0.4, y: 0.55},
-        tabletLandscape: { x: 0.4, y: 0.55},
-        laptop: { x: 0.4, y: 0.55},
-        desktop: { x: 0.4, y: 0.55}
+        mobile: { x: 0.4, y: 0.5 },
+        tablet: { x: 0.4, y: 0.55 },
+        tabletLandscape: { x: 0.4, y: 0.55 },
+        laptop: { x: 0.4, y: 0.55 },
+        desktop: { x: 0.4, y: 0.55 },
       }}
     />
     <Picture
-      src='https://images.theconversation.com/files/649400/original/file-20250217-32-6b95wq.jpg'
-      loading='lazy'
-      className='full_screen_media'
-      imgClassName='object-bottom-center'
-      caption=''
-      source='Source: Google Maps'
-      sourceLink=''
-      alt=''
+      src="https://images.theconversation.com/files/649400/original/file-20250217-32-6b95wq.jpg"
+      loading="lazy"
+      className="full_screen_media"
+      imgClassName="object-bottom-center"
+      caption=""
+      source="Source: Google Maps"
+      sourceLink=""
+      alt=""
       focalPoint={{
-        mobile: { x: 0.4, y: 0.5},
-        tablet: { x: 0.4, y: 0.55},
-        tabletLandscape: { x: 0.4, y: 0.55},
-        laptop: { x: 0.4, y: 0.55},
-        desktop: { x: 0.4, y: 0.55}
+        mobile: { x: 0.4, y: 0.5 },
+        tablet: { x: 0.4, y: 0.55 },
+        tabletLandscape: { x: 0.4, y: 0.55 },
+        laptop: { x: 0.4, y: 0.55 },
+        desktop: { x: 0.4, y: 0.55 },
       }}
     />
   </ScrollBackground>
@@ -275,13 +350,23 @@ The industry then boomed in these border areas when civil war broke out followin
     <ScrollTextChapter className="chapter_dark_background" position="center">
       In late 2019, this area by the Moei River is empty agricultural land.
     </ScrollTextChapter>
-    <ScrollTextChapter className="chapter_dark_background"  position="right" step={true}>
+    <ScrollTextChapter
+      className="chapter_dark_background"
+      position="right"
+      step={true}>
       Soon after, construction begins.
     </ScrollTextChapter>
-    <ScrollTextChapter className="chapter_dark_background" position="center" step={true}>
-      In just a few years, it will become one of Myanmar’s most notorious scam compounds.
+    <ScrollTextChapter
+      className="chapter_dark_background"
+      position="center"
+      step={true}>
+      In just a few years, it will become one of Myanmar’s most notorious scam
+      compounds.
     </ScrollTextChapter>
-    <ScrollTextChapter className="chapter_dark_background" position="center" step={true}>
+    <ScrollTextChapter
+      className="chapter_dark_background"
+      position="center"
+      step={true}>
       Currently KK Park and its surrounds cover about 7.5 square kilometres.
     </ScrollTextChapter>
   </ScrollForeground>
@@ -291,18 +376,18 @@ This month, a militia group allied with the Myanmar junta launched a massive cra
 
 ## Sophisticated operations, shadowy figures
 
-In recent years, the scam industry has become [increasingly professional](https://www.tandfonline.com/doi/full/10.1080/14672715.2023.2268104). These operations have built bigger compounds, with offices, dormitories, shops, entertainment venues and other amenities for workers. Many have clubs similar to brothels, where young women provide sexual services to managers and scammers as a reward for good performances. 
+In recent years, the scam industry has become [increasingly professional](https://www.tandfonline.com/doi/full/10.1080/14672715.2023.2268104). These operations have built bigger compounds, with offices, dormitories, shops, entertainment venues and other amenities for workers. Many have clubs similar to brothels, where young women provide sexual services to managers and scammers as a reward for good performances.
 
 <Image
-  src='https://images.theconversation.com/files/644285/original/file-20250123-18-mpdjcr.jpeg?ixlib=rb-4.1.0q=45&auto=format&w=500&dpr=1'
-  align=''
-  className=''
-  imgClassName='aspect-[3/2]'
-  loading='lazy'
-  alt='Large-scale construction in Sihanoukville, Cambodia.'
-  source='Photo: Ivan Franceschini'
-  caption='Large-scale construction in Sihanoukville, Cambodia.'
-/> 
+  src="https://images.theconversation.com/files/644285/original/file-20250123-18-mpdjcr.jpeg?ixlib=rb-4.1.0q=45&auto=format&w=500&dpr=1"
+  align=""
+  className=""
+  imgClassName="aspect-[3/2]"
+  loading="lazy"
+  alt="Large-scale construction in Sihanoukville, Cambodia."
+  source="Photo: Ivan Franceschini"
+  caption="Large-scale construction in Sihanoukville, Cambodia."
+/>{" "}
 
 Their operations have become more like "proper" companies, as well, with departments overseeing human resources, logistics and IT.
 
@@ -319,23 +404,28 @@ There's a wealth of evidence that, at the very least, officials know about these
 In Cambodia, authorities have swung between denying there is a problem to staging periodic crackdowns. But the industry remains protected. One police officer [told](https://vodenglish.news/body-found-hanging-in-sihanoukvilles-alleged-slave-compound-area/) a local news agency in 2022: "These places don’t allow us to go in"
 
 <Image
-  src='https://images.theconversation.com/files/611302/original/file-20240805-19-yyuymh.jpg'
-  align=''
-  className=''
-  imgClassName='aspect-[3/2]'
-  loading='lazy'
-  alt='A street running next to the Jinshui scam compound in Otres Village, Sihanoukville, Cambodia.'
-  source='Photo: Roun Ry'
-  caption='A street running next to the Jinshui scam compound in Otres Village, Sihanoukville, Cambodia.'
-/> 
+  src="https://images.theconversation.com/files/611302/original/file-20240805-19-yyuymh.jpg"
+  align=""
+  className=""
+  imgClassName="aspect-[3/2]"
+  loading="lazy"
+  alt="A street running next to the Jinshui scam compound in Otres Village, Sihanoukville, Cambodia."
+  source="Photo: Roun Ry"
+  caption="A street running next to the Jinshui scam compound in Otres Village, Sihanoukville, Cambodia."
+/>{" "}
 
-Many times, compound managers also have a direct line of communication with the police. When we were in Sihanoukville in 2022, the government launched a crackdown on the industry. We saw firsthand how quickly the compounds were evacuated. They had clearly been tipped off. 
+Many times, compound managers also have a direct line of communication with the police. When we were in Sihanoukville in 2022, the government launched a crackdown on the industry. We saw firsthand how quickly the compounds were evacuated. They had clearly been tipped off.
 
 Within months, many of the scam centres were back in business, recruiting more unsuspecting people like George with false promises and brutal tactics.
 
 _In [part three of our series](https://stories.theconversation.com/scam-factories-the-inside-story-of-southeast-asias-fraud-compounds-part-3/), we describe how people escape scam compounds and the difficulties they face proving they are actually victims._
 
-<img src="https://counter.theconversation.com/content/250516/count.gif?distributor=republish-lightbox-advanced" alt="The Conversation" className='!border-0 !shadow-none !m-0 !max-h-[1px] !max-w-[1px] !min-h-[1px] !min-w-[1px] !opacity-0 !outline-none !p-0 w-px h-px' referrerPolicy='no-referrer-when-downgrade' />
+<img
+  src="https://counter.theconversation.com/content/250516/count.gif?distributor=republish-lightbox-advanced"
+  alt="The Conversation"
+  className="!border-0 !shadow-none !m-0 !max-h-[1px] !max-w-[1px] !min-h-[1px] !min-w-[1px] !opacity-0 !outline-none !p-0 w-px h-px"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
 
 <AuthorSection>
  <Acknowledgements>
@@ -399,11 +489,26 @@ _In [part three of our series](https://stories.theconversation.com/scam-factorie
         title='Head of Audio, The Conversation UK'
       />
     </Editors>
+
   </Editorial>
 
   <Disclosures>
     The Conversation contacted all the companies mentioned in the series for comment (with the exception of Jinshui, which couldn't be contacted). We didn't receive any responses.
 
     In 2024, Ivan, Ling, Mark, and others co-founded EOS Collective, a non-profit organisation dedicated to investigating the dynamics of the online scam industry and the criminal networks behind it, and supporting survivors of forced criminality in these operations.
+
+    <hr />
+
+    <div className='text-lg'>
+    _If this article has raised issues for you, or you’re concerned about someone you know, you can contact these organisations working to combat human trafficking in Southeast Asia:_
+
+    - _[Blue Dragon](https://www.bluedragon.org/who-we-are/)_
+
+    - _[Global Alms Inc](https://www.globalalms.com/protection)_
+
+    _And if you've been the [victim of a scam](https://www.cyber.gov.au/report-and-recover/recover-from/scams), or you think you may have been targeted by a scammer, you can reach out to the [National Anti-Scam Centre](https://www.scamwatch.gov.au/report-a-scam) and [ReportCyber](https://www.cyber.gov.au/report-and-recover/report) for information._
+
+    </div>
+
   </Disclosures>
 </AuthorSection>
